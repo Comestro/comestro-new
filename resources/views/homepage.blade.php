@@ -6,7 +6,8 @@
     <title>Comestro - Innovating Technology, Empowering People</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <style>
         * {
             margin: 0;
             padding: 0;
@@ -793,417 +794,440 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container header-container">
+    <header class="bg-white shadow-md py-4 fixed w-full z-50 px-[10%]">
+        <div class="container mx-auto px-5 flex justify-between items-center">
             <a href="/">
-                <img src="{{ asset('comestro.png') }}" alt="Comestro" class="logo">
+                <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[150px]">
             </a>
-            <ul class="nav-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#training">Training</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#careers">Careers</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="hidden lg:flex list-none">
+                <li class="ml-[30px]"><a href="/" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Home</a></li>
+                <li class="ml-[30px]"><a href="#about" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">About Us</a></li>
+                <li class="ml-[30px]"><a href="#services" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Services</a></li>
+                <li class="ml-[30px]"><a href="#training" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
+                <li class="ml-[30px]"><a href="#team" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Team</a></li>
+                <li class="ml-[30px]"><a href="#careers" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Careers</a></li>
+                <li class="ml-[30px]"><a href="#contact" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Contact</a></li>
             </ul>
-            <div class="header-buttons">
-                <a href="#demo" class="btn-free-demo">Free Demo</a>
-                <a href="#signin" class="btn-signin">Sign In</a>
+            <div class="hidden md:flex">
+                <a href="#demo" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(0,183,255,0.3)] border border-[#00B7FF] text-[#00B7FF] bg-transparent">Free Demo</a>
+                <a href="#signin" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(0,183,255,0.3)] border border-[#00B7FF] bg-[#00B7FF] text-white">Sign In</a>
             </div>
+            <button class="lg:hidden text-[#555] focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="relative text-white py-[150px] pb-[100px] text-center overflow-hidden bg-gradient-to-br from-[rgba(33,37,41)] to-[rgba(33,37,41)] bg-center bg-cover hero">
         <div id="particles-js"></div>
         <div class="tech-circles"></div>
         <div class="neural-network"></div>
-        <div class="container" style="position: relative; z-index: 5;">
-            <h1>Innovating <span class="highlight">Technology</span>,<br>Empowering People</h1>
-            <h2>Software Development | Web Solutions | IT Training</h2>
-            <p>We create world-class technology solutions that transform businesses and empower individuals through innovative software development and industry-ready training programs.</p>
-            <div class="hero-buttons">
-                <a href="#design" class="btn-primary">Get Free Demo Design</a>
-                <a href="#talk" class="btn-secondary">Let's Talk</a>
+        <div class="container mx-auto px-5 relative z-10">
+            <h1 class="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] mb-2.5 leading-tight">Innovating <span class="text-[#00B7FF]">Technology</span>,<br>Empowering People</h1>
+            <h2 class="text-[1.3rem] md:text-[1.5rem] lg:text-[1.8rem] font-semibold mb-5 text-[#ddd]">Software Development | Web Solutions | IT Training</h2>
+            <p class="text-base md:text-lg lg:text-xl max-w-[800px] mx-auto mb-[30px] text-[#bbb] px-4">We create world-class technology solutions that transform businesses and empower individuals through innovative software development and industry-ready training programs.</p>
+            <div class="mt-[30px] flex flex-col sm:flex-row justify-center">
+                <a href="#design" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 mb-4 sm:mb-0 transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_20px_rgba(0,183,255,0.3)] bg-[#00B7FF] text-white">Get Free Demo Design</a>
+                <a href="#talk" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_20px_rgba(0,183,255,0.3)] bg-transparent border-2 border-[#00B7FF] text-white">Let's Talk</a>
             </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-text">Projects Completed</div>
+            <div class="flex flex-wrap justify-center mt-[60px]">
+                <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
+                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#00B7FF] mb-[5px] stat-number">500+</div>
+                    <div class="text-[#ddd] text-base stat-text">Projects Completed</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">100+</div>
-                    <div class="stat-text">Expert Developers</div>
+                <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
+                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#00B7FF] mb-[5px] stat-number">100+</div>
+                    <div class="text-[#ddd] text-base stat-text">Expert Developers</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-text">Client Satisfaction</div>
+                <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
+                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#00B7FF] mb-[5px] stat-number">98%</div>
+                    <div class="text-[#ddd] text-base stat-text">Client Satisfaction</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">About <span class="highlight">Comestro Techlabs</span></h2>
-            <p>Leading the future of technology with innovative solutions and expert training</p>
+    <section class="py-[100px] text-center" id="about">
+        <div class="container mx-auto px-5">
+            <h2 class="text-[2.5rem] mb-[50px] relative inline-block">About <span class="text-[#00B7FF]">Comestro Techlabs</span></h2>
+            <p class="max-w-[800px] mx-auto mb-[30px] text-[1.1rem] text-[#666]">Leading the future of technology with innovative solutions and expert training</p>
             
-            <div class="values">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-eye"></i>
+            <div class="flex flex-col lg:flex-row justify-center gap-[30px] mt-[50px]">
+                <div class="bg-[#f8f9fa] rounded-[10px] p-[30px] text-left flex-1 max-w-full lg:max-w-[350px] mb-8 lg:mb-0 transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
+                    <div class="w-[50px] h-[50px] bg-[#00B7FF] rounded-[10px] flex justify-center items-center mb-5">
+                        <i class="fas fa-eye text-white text-2xl"></i>
                     </div>
-                    <h3 class="value-title">Our Vision</h3>
-                    <p class="value-text">To create cutting-edge technology solutions that transform businesses and empower individuals to achieve their digital aspirations through cutting-edge innovative and excellence.</p>
-                    <div class="feature-item">
-                        <i class="fas fa-check feature-icon"></i>
+                    <h3 class="text-[1.3rem] font-semibold mb-[15px]">Our Vision</h3>
+                    <p class="text-[#666] leading-[1.7]">To create cutting-edge technology solutions that transform businesses and empower individuals to achieve their digital aspirations through cutting-edge innovative and excellence.</p>
+                    <div class="flex items-center mb-2.5">
+                        <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                         <span>Global Technology Leadership</span>
                     </div>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-bullseye"></i>
+                <div class="bg-[#f8f9fa] rounded-[10px] p-[30px] text-left flex-1 max-w-full lg:max-w-[350px] transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
+                    <div class="w-[50px] h-[50px] bg-[#00B7FF] rounded-[10px] flex justify-center items-center mb-5">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
                     </div>
-                    <h3 class="value-title">Our Mission</h3>
-                    <p class="value-text">To deliver high-quality software solutions, provide impactful training programs, and foster long-term growth for our clients and students through dedication, expertise, and commitment.</p>
-                    <div class="feature-item">
-                        <i class="fas fa-check feature-icon"></i>
+                    <h3 class="text-[1.3rem] font-semibold mb-[15px]">Our Mission</h3>
+                    <p class="text-[#666] leading-[1.7]">To deliver high-quality software solutions, provide impactful training programs, and foster long-term growth for our clients and students through dedication, expertise, and commitment.</p>
+                    <div class="flex items-center mb-2.5">
+                        <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                         <span>Excellence in Every Project</span>
                     </div>
                 </div>
             </div>
             
-            <div class="value-stats">
-                <div class="value-stat-item">
-                    <div class="value-stat-number">5+</div>
-                    <div class="value-stat-text">Years Experience</div>
+            <div class="flex flex-wrap justify-center mt-[70px] gap-x-[20px] md:gap-x-[50px] gap-y-[30px]">
+                <div class="text-center w-[calc(50%-20px)] md:w-auto">
+                    <div class="text-[2rem] font-bold text-[#00B7FF]">5+</div>
+                    <div class="text-[#666] text-[0.9rem]">Years Experience</div>
                 </div>
-                <div class="value-stat-item">
-                    <div class="value-stat-number">50+</div>
-                    <div class="value-stat-text">Expert Developers</div>
+                <div class="text-center w-[calc(50%-20px)] md:w-auto">
+                    <div class="text-[2rem] font-bold text-[#00B7FF]">50+</div>
+                    <div class="text-[#666] text-[0.9rem]">Expert Developers</div>
                 </div>
-                <div class="value-stat-item">
-                    <div class="value-stat-number">24/7</div>
-                    <div class="value-stat-text">Support Available</div>
+                <div class="text-center w-[calc(50%-20px)] md:w-auto">
+                    <div class="text-[2rem] font-bold text-[#00B7FF]">24/7</div>
+                    <div class="text-[#666] text-[0.9rem]">Support Available</div>
                 </div>
-                <div class="value-stat-item">
-                    <div class="value-stat-number">100%</div>
-                    <div class="value-stat-text">Quality Assured</div>
+                <div class="text-center w-[calc(50%-20px)] md:w-auto">
+                    <div class="text-[2rem] font-bold text-[#00B7FF]">100%</div>
+                    <div class="text-[#666] text-[0.9rem]">Quality Assured</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our <span class="highlight">Services</span></h2>
-            <div class="services-intro">
-                <p>Comprehensive technology solutions designed to transform your business</p>
+    <section class="bg-gradient-to-b from-white to-[#f8f9fa] py-[100px] text-center" id="services">
+        <div class="container mx-auto px-[10%]">
+            <h2 class="text-[2.5rem] mb-[50px] relative inline-block font-bold">Our <span class="text-[#00B7FF]">Services</span></h2>
+            <div class="max-w-[800px] mx-auto mb-[50px]">
+                <p class="text-lg text-gray-600">Comprehensive technology solutions designed to transform your business</p>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
+                        <i class="fas fa-globe text-[#00B7FF] text-3xl"></i>
                     </div>
-                    <h3 class="service-title">Web Designing</h3>
-                    <p class="service-text">Create, implement, and maintain websites with seamless user experience.</p>
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                    <h3 class="text-[1.4rem] font-semibold mb-[15px]">Web Designing</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Create, implement, and maintain websites with seamless user experience.</p>
+                    <div class="mt-5">
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Responsive Design</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>UI/UX Integration</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Fast Loading</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>SEO Ready</span>
                         </div>
                     </div>
-                    <a href="#web-design" class="service-link">Learn More</a>
+                    <a href="#web-design" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                        <i class="fas fa-mobile-alt text-[#00B7FF] text-3xl"></i>
                     </div>
-                    <h3 class="service-title">Android Development</h3>
-                    <p class="service-text">Scalable and powerful mobile apps built with latest Android technologies.</p>
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                    <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">Android Development</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Scalable and powerful mobile apps built with latest Android technologies.</p>
+                    <div class="mt-5">
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Native Android</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Cross Platform</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Performance Optimized</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>App Testing</span>
                         </div>
                     </div>
-                    <a href="#android-dev" class="service-link">Learn More</a>
+                    <a href="#android-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-server"></i>
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                        <i class="fas fa-server text-[#00B7FF] text-3xl"></i>
                     </div>
-                    <h3 class="service-title">SaaS Development</h3>
-                    <p class="service-text">Cloud based solutions designed to improve your business growth and efficiency.</p>
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                    <h3 class="text-[1.4rem] font-semibold mb-[15px]">SaaS Development</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Cloud based solutions designed to improve your business growth and efficiency.</p>
+                    <div class="mt-5">
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Scalable Architecture</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Cloud Integration</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>API Development</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Data Management</span>
                         </div>
                     </div>
-                    <a href="#saas-dev" class="service-link">Learn More</a>
+                    <a href="#saas-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                        <i class="fas fa-code text-[#00B7FF] text-3xl"></i>
                     </div>
-                    <h3 class="service-title">MVP in 1 Week</h3>
-                    <p class="service-text">Launch your minimum viable product quickly for market validation and rapid development.</p>
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                    <h3 class="text-[1.4rem] font-semibold mb-[15px]">MVP in 1 Week</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Launch your minimum viable product quickly for market validation and rapid development.</p>
+                    <div class="mt-5">
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Rapid Prototyping</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Agile Development</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Core Features</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Market Ready</span>
                         </div>
                     </div>
-                    <a href="#mvp-dev" class="service-link">Learn More</a>
+                    <a href="#mvp-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                        <i class="fas fa-paint-brush text-[#00B7FF] text-3xl"></i>
                     </div>
-                    <h3 class="service-title">100% Free Demo Design</h3>
-                    <p class="service-text">Experience our design expertise with a free sample before making any commitment.</p>
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                    <h3 class="text-[1.4rem] font-semibold mb-[15px]">100% Free Demo Design</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Experience our design expertise with a free sample before making any commitment.</p>
+                    <div class="mt-5">
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>No Commitment</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Professional Design</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Feedback Integration</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check feature-icon"></i>
+                        <div class="flex items-center mb-2.5">
+                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
                             <span>Design Consultation</span>
                         </div>
                     </div>
-                    <a href="#free-demo" class="service-link">Learn More</a>
+                    <a href="#free-demo" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Transform Your Business?</h2>
-            <p>Let's discuss your project requirements and start something amazing together.</p>
-            <a href="#quote" class="btn-cta">Get Free Quote</a>
+    <section class="bg-gradient-to-br from-[#00B7FF] to-[#0099CC] py-[70px] text-center text-white">
+        <div class="container mx-auto px-[10%]">
+            <h2 class="text-4xl mb-5">Ready to Transform Your Business?</h2>
+            <p class="max-w-[700px] mx-auto mb-[30px]">Let's discuss your project requirements and start something amazing together.</p>
+            <a href="#quote" class="inline-block bg-white text-[#00B7FF] py-[15px] px-[30px] rounded-[30px] font-semibold transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_20px_rgba(255,255,255,0.3)]">Get Free Quote</a>
         </div>
     </section>
 
     <!-- Training Programs Section -->
-    <section class="training" id="training">
-        <div class="container">
-            <h2 class="section-title">Software Engineer <span class="highlight">Training Programs</span></h2>
-            <p>Industry-ready coding programs designed for students to excel in their careers</p>
+    <section class="py-[100px] text-center bg-gradient-to-b from-white to-[#f8f9fa]" id="training">
+        <div class="container mx-auto px-[10%]">
+            <h2 class="text-[2.5rem] mb-[50px] relative inline-block font-bold">Software Engineer <span class="text-[#00B7FF]">Training Programs</span></h2>
+            <p class="mb-8 text-lg text-gray-600">Industry-ready coding programs designed for students to excel in their careers</p>
             
-            <div class="training-cards">
-                <div class="training-card">
-                    <div class="training-icon">
-                        <i class="fas fa-laptop-code"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                        <i class="fas fa-laptop-code text-[#00B7FF] text-[28px]"></i>
                     </div>
-                    <h3 class="training-title">BCA Students</h3>
-                    <p class="training-text">Specialized programming foundation for Bachelor of Computer Applications students.</p>
-                    <div class="training-details">
-                        <span>Duration: 4 months</span>
-                        <span>Level: Basic</span>
+                    <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">BCA Students</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Specialized programming foundation for Bachelor of Computer Applications students.</p>
+                    <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
+                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#00B7FF]"></i> 4 months</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> Basic</span>
                     </div>
-                    <a href="#bca-details" class="btn-view-details">View Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="#bca-details" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline group">
+                        View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
+                    </a>
                 </div>
                 
-                <div class="training-card">
-                    <div class="training-icon">
-                        <i class="fas fa-cogs"></i>
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                        <i class="fas fa-cogs text-[#00B7FF] text-[28px]"></i>
                     </div>
-                    <h3 class="training-title">B.Tech Students</h3>
-                    <p class="training-text">Advanced software engineering concepts for engineering students.</p>
-                    <div class="training-details">
-                        <span>Duration: 6 Months</span>
-                        <span>Level: Intermediate</span>
+                    <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">B.Tech Students</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Advanced software engineering concepts for engineering students.</p>
+                    <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
+                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#00B7FF]"></i> 6 Months</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> Intermediate</span>
                     </div>
-                    <a href="#btech-details" class="btn-view-details">View Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="#btech-details" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline group">
+                        View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
+                    </a>
                 </div>
                 
-                <div class="training-card">
-                    <div class="training-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                        <i class="fas fa-graduation-cap text-[#00B7FF] text-[28px]"></i>
                     </div>
-                    <h3 class="training-title">MCA Students</h3>
-                    <p class="training-text">Project management skills for Master of Computer Applications students.</p>
-                    <div class="training-details">
-                        <span>Duration: 3 Months</span>
-                        <span>Level: Advanced</span>
+                    <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">MCA Students</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Project management skills for Master of Computer Applications students.</p>
+                    <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
+                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#00B7FF]"></i> 3 Months</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> Advanced</span>
                     </div>
-                    <a href="#mca-details" class="btn-view-details">View Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="#mca-details" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline group">
+                        View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
+                    </a>
                 </div>
                 
-                <div class="training-card">
-                    <div class="training-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                        <i class="fas fa-chalkboard-teacher text-[#00B7FF] text-[28px]"></i>
                     </div>
-                    <h3 class="training-title">Hands-on Training</h3>
-                    <p class="training-text">Learn by practice to develop real technologies.</p>
-                    <div class="training-details">
-                        <span>Duration: Flexible</span>
-                        <span>Level: All Levels</span>
+                    <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">Hands-on Training</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Learn by practice to develop real technologies.</p>
+                    <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
+                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#00B7FF]"></i> Flexible</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> All Levels</span>
                     </div>
-                    <a href="#hands-on-details" class="btn-view-details">View Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="#hands-on-details" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline">
+                        View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
+                    </a>
                 </div>
                 
-                <div class="training-card">
-                    <div class="training-icon">
-                        <i class="fas fa-industry"></i>
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                        <i class="fas fa-industry text-[#00B7FF] text-[28px]"></i>
                     </div>
-                    <h3 class="training-title">Industry Mentors</h3>
-                    <p class="training-text">Learn from experienced professionals with years of expertise.</p>
-                    <div class="training-details">
-                        <span>Experience: 10+ years</span>
-                        <span>Level: Expert</span>
+                    <h3 class="text-[1.3rem] font-semibold mb-[15px]">Industry Mentors</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Learn from experienced professionals with years of expertise.</p>
+                    <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
+                        <span class="flex items-center"><i class="far fa-star mr-2 text-[#00B7FF]"></i> 10+ years</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> Expert</span>
                     </div>
-                    <a href="#industry-mentors" class="btn-view-details">View Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="#industry-mentors" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline">
+                        View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
+                    </a>
                 </div>
                 
-                <div class="training-card">
-                    <div class="training-icon">
-                        <i class="fas fa-certificate"></i>
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                        <i class="fas fa-certificate text-[#00B7FF] text-[28px]"></i>
                     </div>
-                    <h3 class="training-title">Certification</h3>
-                    <p class="training-text">Get industry recognized certificates on completion.</p>
-                    <div class="training-details">
-                        <span>Recognition: Global</span>
-                        <span>Value: High</span>
+                    <h3 class="text-[1.3rem] font-semibold mb-[15px]">Certification</h3>
+                    <p class="text-[#666] mb-5 leading-[1.7]">Get industry recognized certificates on completion.</p>
+                    <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
+                        <span class="flex items-center"><i class="fas fa-globe mr-2 text-[#00B7FF]"></i> Global</span>
+                        <span class="flex items-center"><i class="fas fa-award mr-2 text-[#00B7FF]"></i> High Value</span>
                     </div>
-                    <a href="#certification" class="btn-view-details">View Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="#certification" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline">
+                        View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Tech Journey Section -->
-    <section class="tech-journey" id="journey">
-        <div class="container">
-            <h2 class="section-title">Ready to Start Your <span class="highlight">Tech Journey?</span></h2>
+    <section class="bg-[#f8f9fa] py-[80px] text-center" id="journey">
+        <div class="container mx-auto px-[10%]">
+            <h2 class="text-[2rem] md:text-[2.5rem] mb-[30px] md:mb-[50px] relative inline-block">Ready to Start Your <span class="text-[#00B7FF]">Tech Journey?</span></h2>
             <p>Join thousands of students who have successfully launched their careers with our training programs.</p>
-            <div style="margin-top: 30px;">
-                <a href="#explore" class="btn-outlined">Explore Training Programs</a>
-                <a href="#download" class="btn-outlined">Download Curriculum</a>
+            <div class="mt-[30px] flex flex-col sm:flex-row justify-center">
+                <a href="#explore" class="py-3 px-6 border-2 border-[#00B7FF] text-[#00B7FF] rounded-[30px] font-medium mx-2.5 mb-4 sm:mb-0 transition-all duration-300 hover:bg-[#00B7FF] hover:text-white inline-block">Explore Training Programs</a>
+                <a href="#download" class="py-3 px-6 border-2 border-[#00B7FF] text-[#00B7FF] rounded-[30px] font-medium mx-2.5 transition-all duration-300 hover:bg-[#00B7FF] hover:text-white inline-block">Download Curriculum</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <img src="{{ asset('comestro.png') }}" alt="Comestro" class="footer-logo">
+    <footer class="bg-[#212529] text-[#adb5bd] py-[70px] pb-5">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-[50px]">
+                <div class="max-w-[300px]">
+                    <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[120px] mb-4">
                     <p>Pioneering technology solutions that transform businesses through cutting-edge software development and expert training.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="flex gap-4 mt-5">
+                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <div class="footer-links-section">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Contact</a></li>
+                <div>
+                    <h3 class="text-white text-[1.2rem] mb-5 font-semibold">Quick Links</h3>
+                    <ul class="list-none">
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Home</a></li>
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">About</a></li>
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Services</a></li>
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Team</a></li>
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-links-section">
-                    <h3 class="footer-title">Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Android Development</a></li>
-                        <li><a href="#">SaaS Development</a></li>
-                        <li><a href="#">MVP in 1 Week</a></li>
-                        <li><a href="#">Training</a></li>
+                <div>
+                    <h3 class="text-white text-[1.2rem] mb-5 font-semibold">Our Services</h3>
+                    <ul class="list-none">
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Web Development</a></li>
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Android Development</a></li>
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">SaaS Development</a></li>
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">MVP in 1 Week</a></li>
+                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-links-section">
-                    <h3 class="footer-title">Stay Updated</h3>
+                <div>
+                    <h3 class="text-white text-[1.2rem] mb-5 font-semibold">Stay Updated</h3>
                     <p>Subscribe to our newsletter for the latest updates and tech insights.</p>
-                    <form style="margin-top: 15px;">
-                        <input type="email" placeholder="Your Email Address" style="padding: 12px; border-radius: 5px; border: none; width: 100%;">
-                        <button type="submit" style="background: #00B7FF; color: white; border: none; padding: 12px 20px; border-radius: 5px; margin-top: 10px; cursor: pointer; width: 100%;">Subscribe</button>
+                    <form class="mt-4">
+                        <input type="email" placeholder="Your Email Address" class="p-3 rounded w-full">
+                        <button type="submit" class="bg-[#00B7FF] text-white border-0 p-3 rounded mt-2.5 cursor-pointer w-full">Subscribe</button>
                     </form>
                 </div>
             </div>
             
-            <div class="footer-bottom">
+            <div class="border-t border-[rgba(255,255,255,0.1)] pt-5 flex flex-col md:flex-row justify-between items-center text-[0.9rem]">
                 <p>© 2025 Comestro Techlabs Pvt. Ltd. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="md:ml-5 mx-2.5 md:mx-0 text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="md:ml-5 mx-2.5 md:mx-0 text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Terms of Service</a>
                 </div>
             </div>
         </div>
