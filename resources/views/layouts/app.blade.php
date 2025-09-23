@@ -226,7 +226,7 @@
     <header class="bg-white py-4 fixed w-full z-50 px-[10%]">
         <div class="container mx-auto px-5 flex justify-between items-center">
             <a href="/">
-                <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[150px]">
+                <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[140px] lg:w-[180px]">
             </a>
             <ul class="hidden lg:flex list-none">
                 <li class="ml-[30px]"><a href="/" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Home</a></li>
@@ -262,7 +262,7 @@
     @yield('content')
 
     <!-- Footer -->
-    <footer class="bg-[#212529] text-[#adb5bd] py-[70px] pb-5">
+    <footer class="bg-[#212529] text-[#adb5bd] py-[70px] pb-5 bg-[url('footer.png')] bg-cover bg-no-repeat">
         <div class="container mx-auto px-[10%]">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-[50px]">
                 <div class="max-w-[300px]">
