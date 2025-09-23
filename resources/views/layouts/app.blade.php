@@ -223,7 +223,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="bg-white shadow-md py-4 fixed w-full z-50 px-[10%]">
+    <header class="bg-white py-4 fixed w-full z-50 px-[10%]">
         <div class="container mx-auto px-5 flex justify-between items-center">
             <a href="/">
                 <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[150px]">
@@ -231,15 +231,26 @@
             <ul class="hidden lg:flex list-none">
                 <li class="ml-[30px]"><a href="/" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Home</a></li>
                 <li class="ml-[30px]"><a href="{{ route('about') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">About Us</a></li>
-                <li class="ml-[30px]"><a href="{{ route('services') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Services</a></li>
+                <li class="ml-[30px] relative group">
+                    <a href="{{ route('services') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300 flex items-center">
+                        Services <i class="fas fa-chevron-down text-xs ml-1 mt-1 transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-64 rounded-md bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right z-50">
+                        <div class="py-1">
+                            <a href="{{ route('services') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">All Services</a>
+                            <a href="{{ route('services.game-zone') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Game Zone Management</a>
+                            <a href="{{ route('services.hospital') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hospital Appointment System</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="ml-[30px]"><a href="{{ route('portfolio') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Portfolio</a></li>
                 <li class="ml-[30px]"><a href="{{ route('training') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
                 <li class="ml-[30px]"><a href="{{ route('careers') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Careers</a></li>
                 <li class="ml-[30px]"><a href="{{ route('contact') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Contact</a></li>
             </ul>
             <div class="hidden md:flex">
-                <a href="#demo" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(0,183,255,0.3)] border border-[#00B7FF] text-[#00B7FF] bg-transparent">Free Demo</a>
-                <a href="#signin" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(0,183,255,0.3)] border border-[#00B7FF] bg-[#00B7FF] text-white">Sign In</a>
+                <a href="#demo" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#00B7FF] text-[#00B7FF] bg-transparent">Free Demo</a>
+                <a href="#signin" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#00B7FF] bg-[#00B7FF] text-white">Sign In</a>
             </div>
             <button class="lg:hidden text-[#555] focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -293,6 +304,8 @@
                         <li class="mb-2.5"><a href="{{ route('services') }}#android-dev" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Android Development</a></li>
                         <li class="mb-2.5"><a href="{{ route('services') }}#saas-dev" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">SaaS Development</a></li>
                         <li class="mb-2.5"><a href="{{ route('services') }}#mvp-dev" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">MVP in 1 Week</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services.game-zone') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Game Zone Management</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services.hospital') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Hospital Appointment</a></li>
                         <li class="mb-2.5"><a href="{{ route('training') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
                     </ul>
                 </div>
@@ -316,6 +329,59 @@
             </div>
         </div>
     </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900 mb-4" id="modal-title">Get a Quote</h3>
+                            <form id="quoteForm" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                    <input type="text" name="name" id="name" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                    <input type="email" name="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]" required>
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                                    <input type="tel" name="phone" id="phone" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]" required>
+                                </div>
+                                <div>
+                                    <label for="service" class="block text-sm font-medium text-gray-700">Service</label>
+                                    <select name="service" id="service" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]">
+                                        <option value="" selected disabled>Select a Service</option>
+                                        <option value="game-zone">Game Zone Management Software</option>
+                                        <option value="hospital">Hospital Appointment System</option>
+                                        <option value="web">Web Development</option>
+                                        <option value="mobile">Mobile App Development</option>
+                                        <option value="saas">SaaS Development</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                    <textarea name="message" id="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]" required></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" id="submitQuoteBtn" class="w-full inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-[#00B7FF] text-base font-medium text-white hover:bg-[#0099CC] focus:outline-none sm:ml-3 sm:w-auto sm:text-sm">Submit</button>
+                    <button type="button" id="closeModalBtn" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Add any JavaScript you need here
@@ -344,6 +410,65 @@
             };
             
             window.addEventListener('scroll', scrollWatcher);
+            
+            // Modal handling
+            const modal = document.getElementById('quoteModal');
+            const openModalBtns = document.querySelectorAll('.open-quote-modal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const submitQuoteBtn = document.getElementById('submitQuoteBtn');
+            
+            // Open modal
+            if (openModalBtns) {
+                openModalBtns.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                        
+                        // If there's a data attribute for service, select it in the dropdown
+                        if (this.dataset.service) {
+                            document.getElementById('service').value = this.dataset.service;
+                        }
+                    });
+                });
+            }
+            
+            // Close modal
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', function() {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            // Close on outside click
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Form submission
+            if (submitQuoteBtn) {
+                submitQuoteBtn.addEventListener('click', function() {
+                    const form = document.getElementById('quoteForm');
+                    if (form.checkValidity()) {
+                        // In a real application, you would submit the form data to your backend here
+                        alert('Thank you for your quote request. We will contact you shortly!');
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                        form.reset();
+                    } else {
+                        // Trigger HTML5 validation
+                        const submitEvent = new Event('submit', {
+                            'bubbles': true,
+                            'cancelable': true
+                        });
+                        form.dispatchEvent(submitEvent);
+                    }
+                });
+            }
         });
     </script>
 

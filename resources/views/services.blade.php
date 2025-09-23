@@ -21,8 +21,8 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Web Development -->
-                <div id="web-design" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div id="web-design" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-globe text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">Web Development</h3>
@@ -48,8 +48,8 @@
                 </div>
                 
                 <!-- Android Development -->
-                <div id="android-dev" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div id="android-dev" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-mobile-alt text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">Android Development</h3>
@@ -75,8 +75,8 @@
                 </div>
                 
                 <!-- SaaS Development -->
-                <div id="saas-dev" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div id="saas-dev" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-server text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">SaaS Development</h3>
@@ -102,8 +102,8 @@
                 </div>
                 
                 <!-- MVP in 1 Week -->
-                <div id="mvp-dev" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div id="mvp-dev" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-code text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">MVP in 1 Week</h3>
@@ -129,8 +129,8 @@
                 </div>
                 
                 <!-- Free Demo Design -->
-                <div id="free-demo" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div id="free-demo" class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-paint-brush text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">100% Free Demo Design</h3>
@@ -156,8 +156,8 @@
                 </div>
 
                 <!-- iOS Development -->
-                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fab fa-apple text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">iOS Development</h3>
@@ -195,7 +195,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Step 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-xl transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-full flex items-center justify-center mb-4 text-[#00B7FF] font-bold text-xl">1</div>
                     <h3 class="text-xl font-semibold mb-3">Discovery</h3>
                     <p class="text-gray-700">
@@ -204,7 +204,7 @@
                 </div>
                 
                 <!-- Step 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-xl transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-full flex items-center justify-center mb-4 text-[#00B7FF] font-bold text-xl">2</div>
                     <h3 class="text-xl font-semibold mb-3">Planning</h3>
                     <p class="text-gray-700">
@@ -213,7 +213,7 @@
                 </div>
                 
                 <!-- Step 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-xl transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-full flex items-center justify-center mb-4 text-[#00B7FF] font-bold text-xl">3</div>
                     <h3 class="text-xl font-semibold mb-3">Development</h3>
                     <p class="text-gray-700">
@@ -222,7 +222,7 @@
                 </div>
                 
                 <!-- Step 4 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-xl transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-full flex items-center justify-center mb-4 text-[#00B7FF] font-bold text-xl">4</div>
                     <h3 class="text-xl font-semibold mb-3">Launch & Support</h3>
                     <p class="text-gray-700">
@@ -304,7 +304,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Case Study 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                <div class="bg-white rounded-xl overflow-hidden transition duration-300">
                     <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-3">E-commerce</span>
@@ -317,7 +317,7 @@
                 </div>
                 
                 <!-- Case Study 2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                <div class="bg-white rounded-xl overflow-hidden transition duration-300">
                     <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Healthcare App" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm font-medium mb-3">Healthcare</span>
@@ -330,7 +330,7 @@
                 </div>
                 
                 <!-- Case Study 3 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                <div class="bg-white rounded-xl overflow-hidden transition duration-300">
                     <img src="https://images.unsplash.com/photo-1534870439826-4646c8671ba8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SaaS Platform" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm font-medium mb-3">SaaS</span>
@@ -395,7 +395,7 @@
                 </div>
                 
                 <!-- Time & Material -->
-                <div class="bg-[#00B7FF] text-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform scale-105">
+                <div class="bg-[#00B7FF] text-white p-8 rounded-xl transition duration-300 transform scale-105">
                     <div class="absolute top-4 right-4">
                         <span class="bg-white text-[#00B7FF] text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
                     </div>

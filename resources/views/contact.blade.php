@@ -16,7 +16,7 @@
         <div class="container mx-auto px-[10%]">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Contact Form -->
-                <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="bg-white rounded-xl border border-gray-100 p-8">
                     <h2 class="text-3xl font-bold mb-8">Send us a <span class="text-[#00B7FF]">Message</span></h2>
                     <form action="#" method="POST" class="space-y-6">
                         @csrf
@@ -140,7 +140,7 @@
                 <p class="text-gray-600 mt-4 max-w-3xl mx-auto">Visit us at our office located in the heart of Gurugram's tech hub</p>
             </div>
             
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-9 h-[500px]">
                     <!-- Replace with your Google Maps embed code -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56042.54635794867!2d77.01201573476566!3d28.4594536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e5c64b1e!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -291,7 +291,7 @@
                 Whether you need a custom software solution, website development, or training programs, we're here to help you succeed.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="px-8 py-3 bg-white text-[#00B7FF] font-semibold rounded-full hover:shadow-lg transition duration-300">
+                <a href="#" class="px-8 py-3 bg-white text-[#00B7FF] font-semibold rounded-full transition duration-300">
                     Request a Proposal
                 </a>
                 <a href="tel:+911234567890" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-300">

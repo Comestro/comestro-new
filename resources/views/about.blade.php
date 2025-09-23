@@ -28,7 +28,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team Collaboration" class="rounded-lg shadow-xl w-full">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team Collaboration" class="rounded-lg w-full">
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 <h2 class="text-3xl font-bold">Our Vision & <span class="text-[#00B7FF]">Mission</span></h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                <div class="bg-white p-8 rounded-xl transition duration-300">
                     <div class="w-16 h-16 bg-[#f1f8ff] rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-eye text-[#00B7FF] text-2xl"></i>
                     </div>
@@ -64,7 +64,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                <div class="bg-white p-8 rounded-xl transition duration-300">
                     <div class="w-16 h-16 bg-[#f1f8ff] rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-bullseye text-[#00B7FF] text-2xl"></i>
                     </div>
@@ -99,7 +99,7 @@
                 <p class="text-gray-600 mt-4 max-w-3xl mx-auto">The principles that guide our work and shape our company culture</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 border border-gray-100 rounded-lg transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-lightbulb text-[#00B7FF] text-xl"></i>
                     </div>
@@ -108,7 +108,7 @@
                         We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions.
                     </p>
                 </div>
-                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 border border-gray-100 rounded-lg transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-award text-[#00B7FF] text-xl"></i>
                     </div>
@@ -117,7 +117,7 @@
                         We strive for the highest quality in every aspect of our work, from code to client interactions.
                     </p>
                 </div>
-                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 border border-gray-100 rounded-lg transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-handshake text-[#00B7FF] text-xl"></i>
                     </div>
@@ -126,7 +126,7 @@
                         We operate with transparency, honesty, and strong ethical principles in all our dealings.
                     </p>
                 </div>
-                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 border border-gray-100 rounded-lg transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-users text-[#00B7FF] text-xl"></i>
                     </div>
@@ -135,7 +135,7 @@
                         We believe in the power of teamwork, both internally and with our clients and partners.
                     </p>
                 </div>
-                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 border border-gray-100 rounded-lg transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-user-graduate text-[#00B7FF] text-xl"></i>
                     </div>
@@ -144,7 +144,7 @@
                         We foster a culture of growth and learning to stay ahead in the ever-evolving tech landscape.
                     </p>
                 </div>
-                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 border border-gray-100 rounded-lg transition duration-300">
                     <div class="w-12 h-12 bg-[#f1f8ff] rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-heart text-[#00B7FF] text-xl"></i>
                     </div>
@@ -228,19 +228,19 @@
                 <p class="text-gray-600 mt-4 max-w-3xl mx-auto">Numbers that reflect our journey and achievements</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 bg-gray-50 rounded-lg transition duration-300">
                     <div class="text-4xl font-bold text-[#00B7FF] mb-2">500+</div>
                     <p class="text-xl text-gray-700">Projects Completed</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 bg-gray-50 rounded-lg transition duration-300">
                     <div class="text-4xl font-bold text-[#00B7FF] mb-2">50+</div>
                     <p class="text-xl text-gray-700">Expert Developers</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 bg-gray-50 rounded-lg transition duration-300">
                     <div class="text-4xl font-bold text-[#00B7FF] mb-2">98%</div>
                     <p class="text-xl text-gray-700">Client Satisfaction</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition duration-300">
+                <div class="p-6 bg-gray-50 rounded-lg transition duration-300">
                     <div class="text-4xl font-bold text-[#00B7FF] mb-2">15+</div>
                     <p class="text-xl text-gray-700">Countries Served</p>
                 </div>
@@ -256,7 +256,7 @@
                 Partner with Comestro for innovative tech solutions that transform your business and drive growth.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="{{ route('contact') }}" class="px-8 py-3 bg-white text-[#00B7FF] font-semibold rounded-full hover:shadow-lg transition duration-300">
+                <a href="{{ route('contact') }}" class="px-8 py-3 bg-white text-[#00B7FF] font-semibold rounded-full transition duration-300">
                     Contact Us
                 </a>
                 <a href="{{ route('services') }}" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-300">

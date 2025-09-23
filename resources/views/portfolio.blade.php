@@ -21,169 +21,108 @@
             
             <!-- Portfolio Categories -->
             <div class="flex flex-wrap justify-center mb-12 gap-4">
-                <button class="px-6 py-2 bg-[#00B7FF] text-white rounded-full hover:bg-[#0099cc] transition duration-200">
+                <button class="filter-btn px-6 py-2 bg-[#00B7FF] text-white rounded-full hover:bg-[#0099cc] transition duration-200" data-filter="all">
                     All Projects
                 </button>
-                <button class="px-6 py-2 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition duration-200">
-                    Web Development
-                </button>
-                <button class="px-6 py-2 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition duration-200">
-                    Mobile Apps
-                </button>
-                <button class="px-6 py-2 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition duration-200">
-                    E-commerce
-                </button>
-                <button class="px-6 py-2 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition duration-200">
-                    Enterprise Solutions
-                </button>
+                
+                @php
+                    $categories = $projects->pluck('category')->unique();
+                @endphp
+                
+                @foreach($categories as $category)
+                    <button class="filter-btn px-6 py-2 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition duration-200" data-filter="{{ Str::slug($category) }}">
+                        {{ $category }}
+                    </button>
+                @endforeach
             </div>
             
-            <!-- Featured Projects -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <!-- Project 1 -->
-                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="E-commerce Platform" class="w-full h-64 object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
-                        <span class="inline-block px-3 py-1 bg-[#00B7FF]/90 text-white text-xs font-medium rounded-full mb-2">
-                            E-commerce
-                        </span>
-                        <h3 class="text-xl font-bold mb-1">FashionHub</h3>
-                        <p class="text-sm text-white/80 mb-2">A complete e-commerce solution for a fashion retailer with advanced filtering, search, and payment integrations.</p>
-                        <a href="#" class="inline-block font-semibold text-[#00B7FF]">View Details</a>
-                    </div>
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                        <div class="flex flex-col items-center">
-                            <a href="#" class="inline-block px-6 py-2 bg-[#00B7FF] text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-200 mb-4">
-                                View Case Study
-                            </a>
-                            <a href="#" class="text-white hover:text-[#00B7FF] transition duration-200">
-                                Visit Website
-                            </a>
+            <!-- Projects List - Alternating Layout -->
+            <div class="space-y-16 mb-16">
+                @forelse($projects as $index => $project)
+                    <div class="project-item bg-white rounded-xl border border-gray-100 overflow-hidden transition-all duration-300" data-category="{{ Str::slug($project->category) }}">
+                        <div class="grid md:grid-cols-2 {{ $index % 2 == 0 ? '' : 'md:flex-row-reverse' }} items-center">
+                            <!-- Project Image -->
+                            <div class="relative h-80 md:h-full">
+                                @if($project->image)
+                                    <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}" class="w-full h-full object-cover">
+                                @else
+                                    <div class="bg-gray-100 w-full h-full flex items-center justify-center">
+                                        <i class="fas fa-image text-gray-300 text-5xl"></i>
+                                    </div>
+                                @endif
+                                
+                                @if($project->featured)
+                                    <div class="absolute top-4 right-4 px-3 py-1 bg-yellow-500 text-white text-sm font-semibold rounded-md">
+                                        <i class="fas fa-star mr-1"></i> Featured
+                                    </div>
+                                @endif
+                                
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:hidden"></div>
+                            </div>
+                            
+                            <!-- Project Details -->
+                            <div class="p-8 md:p-10 {{ $index % 2 == 0 ? '' : 'md:order-first' }}">
+                                <div class="flex items-center mb-4">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-md">
+                                        {{ $project->category }}
+                                    </span>
+                                    @if($project->completion_date)
+                                        <span class="mx-3 text-gray-300">|</span>
+                                        <span class="text-gray-500 text-sm">
+                                            <i class="far fa-calendar-alt mr-1"></i>
+                                            {{ \Carbon\Carbon::parse($project->completion_date)->format('M Y') }}
+                                        </span>
+                                    @endif
+                                </div>
+                                
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3">{{ $project->title }}</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">{{ $project->description }}</p>
+                                
+                                @if($project->technologies)
+                                <div class="mb-6">
+                                    <h4 class="text-sm font-semibold text-gray-500 uppercase mb-2">Technologies</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        @foreach(explode(',', $project->technologies) as $tech)
+                                            <span class="bg-gray-100 text-gray-700 px-2 py-1 text-xs font-medium rounded">
+                                                {{ trim($tech) }}
+                                            </span>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                @endif
+                                
+                                <div class="flex flex-wrap gap-3 mt-6">
+                                    <a href="{{ url('/portfolio/' . $project->slug) }}" class="inline-flex items-center px-5 py-2 bg-[#00B7FF] text-white font-medium rounded-md hover:bg-[#0099cc] transition duration-200">
+                                        <i class="fas fa-eye mr-2"></i> View Project
+                                    </a>
+                                    
+                                    @if($project->website_url)
+                                        <a href="{{ $project->website_url }}" target="_blank" class="inline-flex items-center px-5 py-2 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-50 transition duration-200">
+                                            <i class="fas fa-external-link-alt mr-2"></i> Live Preview
+                                        </a>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mobile App" class="w-full h-64 object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
-                        <span class="inline-block px-3 py-1 bg-[#00B7FF]/90 text-white text-xs font-medium rounded-full mb-2">
-                            Mobile App
-                        </span>
-                        <h3 class="text-xl font-bold mb-1">HealthTracker</h3>
-                        <p class="text-sm text-white/80 mb-2">A fitness and wellness tracking app with personalized recommendations, workout plans, and nutrition guidance.</p>
-                        <a href="#" class="inline-block font-semibold text-[#00B7FF]">View Details</a>
-                    </div>
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                        <div class="flex flex-col items-center">
-                            <a href="#" class="inline-block px-6 py-2 bg-[#00B7FF] text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-200 mb-4">
-                                View Case Study
-                            </a>
-                            <a href="#" class="text-white hover:text-[#00B7FF] transition duration-200">
-                                App Store
-                            </a>
+                @empty
+                    <div class="py-20 text-center">
+                        <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gray-100">
+                            <i class="fas fa-folder-open text-gray-400 text-3xl"></i>
                         </div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">No Projects Found</h3>
+                        <p class="text-gray-500 max-w-md mx-auto">We're currently working on adding our portfolio projects. Please check back soon!</p>
                     </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Enterprise Dashboard" class="w-full h-64 object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
-                        <span class="inline-block px-3 py-1 bg-[#00B7FF]/90 text-white text-xs font-medium rounded-full mb-2">
-                            Enterprise Solution
-                        </span>
-                        <h3 class="text-xl font-bold mb-1">DataInsight</h3>
-                        <p class="text-sm text-white/80 mb-2">A comprehensive analytics dashboard for enterprise clients with real-time data visualization and reporting.</p>
-                        <a href="#" class="inline-block font-semibold text-[#00B7FF]">View Details</a>
-                    </div>
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                        <div class="flex flex-col items-center">
-                            <a href="#" class="inline-block px-6 py-2 bg-[#00B7FF] text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-200 mb-4">
-                                View Case Study
-                            </a>
-                            <a href="#" class="text-white hover:text-[#00B7FF] transition duration-200">
-                                Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Web Platform" class="w-full h-64 object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
-                        <span class="inline-block px-3 py-1 bg-[#00B7FF]/90 text-white text-xs font-medium rounded-full mb-2">
-                            Web Development
-                        </span>
-                        <h3 class="text-xl font-bold mb-1">LearnPortal</h3>
-                        <p class="text-sm text-white/80 mb-2">An online learning platform with course management, video streaming, and student progress tracking.</p>
-                        <a href="#" class="inline-block font-semibold text-[#00B7FF]">View Details</a>
-                    </div>
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                        <div class="flex flex-col items-center">
-                            <a href="#" class="inline-block px-6 py-2 bg-[#00B7FF] text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-200 mb-4">
-                                View Case Study
-                            </a>
-                            <a href="#" class="text-white hover:text-[#00B7FF] transition duration-200">
-                                Visit Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mobile Banking App" class="w-full h-64 object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
-                        <span class="inline-block px-3 py-1 bg-[#00B7FF]/90 text-white text-xs font-medium rounded-full mb-2">
-                            Fintech
-                        </span>
-                        <h3 class="text-xl font-bold mb-1">QuickPay</h3>
-                        <p class="text-sm text-white/80 mb-2">A secure mobile banking application with easy money transfers, bill payments, and expense tracking.</p>
-                        <a href="#" class="inline-block font-semibold text-[#00B7FF]">View Details</a>
-                    </div>
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                        <div class="flex flex-col items-center">
-                            <a href="#" class="inline-block px-6 py-2 bg-[#00B7FF] text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-200 mb-4">
-                                View Case Study
-                            </a>
-                            <a href="#" class="text-white hover:text-[#00B7FF] transition duration-200">
-                                App Store
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Real Estate Platform" class="w-full h-64 object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
-                        <span class="inline-block px-3 py-1 bg-[#00B7FF]/90 text-white text-xs font-medium rounded-full mb-2">
-                            Real Estate
-                        </span>
-                        <h3 class="text-xl font-bold mb-1">PropertyFinder</h3>
-                        <p class="text-sm text-white/80 mb-2">A real estate platform with advanced property search, virtual tours, and agent management system.</p>
-                        <a href="#" class="inline-block font-semibold text-[#00B7FF]">View Details</a>
-                    </div>
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                        <div class="flex flex-col items-center">
-                            <a href="#" class="inline-block px-6 py-2 bg-[#00B7FF] text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-200 mb-4">
-                                View Case Study
-                            </a>
-                            <a href="#" class="text-white hover:text-[#00B7FF] transition duration-200">
-                                Visit Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
             
+            @if($projects->count() > 0 && $projects->count() % 6 === 0)
             <div class="text-center">
-                <a href="#" class="px-8 py-3 bg-[#00B7FF] text-white font-semibold rounded-full hover:shadow-lg transition duration-300">
+                <a href="{{ url('/portfolio') }}?page=2" class="px-8 py-3 bg-[#00B7FF] text-white font-semibold rounded-full transition duration-300">
                     Load More Projects
                 </a>
             </div>
+            @endif
         </div>
     </section>
 
@@ -195,7 +134,7 @@
                 <p class="text-gray-600 mt-4 max-w-3xl mx-auto">A deep dive into one of our most successful projects</p>
             </div>
             
-            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="E-learning Platform" class="w-full h-full object-cover">
@@ -404,7 +343,7 @@
                 Let's discuss how we can help bring your ideas to life with innovative technology solutions.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="{{ route('contact') }}" class="px-8 py-3 bg-white text-[#00B7FF] font-semibold rounded-full hover:shadow-lg transition duration-300">
+                <a href="{{ route('contact') }}" class="px-8 py-3 bg-white text-[#00B7FF] font-semibold rounded-full transition duration-300">
                     Start a Project
                 </a>
                 <a href="{{ route('services') }}" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-300">
@@ -413,4 +352,51 @@
             </div>
         </div>
     </section>
+
+@section('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all filter buttons and project items
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        
+        // Add click event to each filter button
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Get the filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => {
+                    btn.classList.remove('bg-[#00B7FF]', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+                
+                // Add active class to clicked button
+                this.classList.remove('bg-white', 'text-gray-700');
+                this.classList.add('bg-[#00B7FF]', 'text-white');
+                
+                // Filter projects
+                projectItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Smooth animation for filtering
+                projectItems.forEach(item => {
+                    item.classList.add('opacity-0');
+                    setTimeout(() => {
+                        if (item.style.display !== 'none') {
+                            item.classList.remove('opacity-0');
+                        }
+                    }, 300);
+                });
+            });
+        });
+    });
+</script>
+@endsection
 @endsection

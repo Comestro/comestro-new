@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comestro - Innovating Technology, Empowering People</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <script src="https://cdn.tailwindcss.com"></script>
-   <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        body {
-            color: #333;
-            line-height: 1.6;
+@extends('layouts.app')
+
+@section('title', 'Home')
+
+@section('styles')
+<style>
+        /* Hero Section Styles */
+        .hero {
+            background: linear-gradient(135deg, rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.8)), url('/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         
         a {
@@ -776,47 +772,11 @@
             .stats, .value-stats {
                 flex-wrap: wrap;
             }
-            
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .footer-bottom-links {
-                margin-top: 15px;
-            }
-            
-            .footer-bottom-links a {
-                margin: 0 10px;
-            }
         }
     </style>
-</head>
-<body>
-    <!-- Header -->
-    <header class="bg-white shadow-md py-4 fixed w-full z-50 px-[10%]">
-        <div class="container mx-auto px-5 flex justify-between items-center">
-            <a href="/">
-                <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[150px]">
-            </a>
-            <ul class="hidden lg:flex list-none">
-                <li class="ml-[30px]"><a href="/" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Home</a></li>
-                <li class="ml-[30px]"><a href="#about" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">About Us</a></li>
-                <li class="ml-[30px]"><a href="#services" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Services</a></li>
-                <li class="ml-[30px]"><a href="#training" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
-                <li class="ml-[30px]"><a href="#team" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Team</a></li>
-                <li class="ml-[30px]"><a href="#careers" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Careers</a></li>
-                <li class="ml-[30px]"><a href="#contact" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Contact</a></li>
-            </ul>
-            <div class="hidden md:flex">
-                <a href="#demo" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(0,183,255,0.3)] border border-[#00B7FF] text-[#00B7FF] bg-transparent">Free Demo</a>
-                <a href="#signin" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(0,183,255,0.3)] border border-[#00B7FF] bg-[#00B7FF] text-white">Sign In</a>
-            </div>
-            <button class="lg:hidden text-[#555] focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-    </header>
+@endsection
+
+@section('content')
 
     <!-- Hero Section -->
     <section class="relative text-white py-[150px] pb-[100px] text-center overflow-hidden bg-gradient-to-br from-[rgba(33,37,41)] to-[rgba(33,37,41)] bg-center bg-cover hero">
@@ -828,8 +788,8 @@
             <h2 class="text-[1.3rem] md:text-[1.5rem] lg:text-[1.8rem] font-semibold mb-5 text-[#ddd]">Software Development | Web Solutions | IT Training</h2>
             <p class="text-base md:text-lg lg:text-xl max-w-[800px] mx-auto mb-[30px] text-[#bbb] px-4">We create world-class technology solutions that transform businesses and empower individuals through innovative software development and industry-ready training programs.</p>
             <div class="mt-[30px] flex flex-col sm:flex-row justify-center">
-                <a href="#design" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 mb-4 sm:mb-0 transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_20px_rgba(0,183,255,0.3)] bg-[#00B7FF] text-white">Get Free Demo Design</a>
-                <a href="#talk" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_20px_rgba(0,183,255,0.3)] bg-transparent border-2 border-[#00B7FF] text-white">Let's Talk</a>
+                <a href="#design" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 mb-4 sm:mb-0 transition-all duration-300 hover:-translate-y-[3px] bg-[#00B7FF] text-white">Get Free Demo Design</a>
+                <a href="#talk" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 transition-all duration-300 hover:-translate-y-[3px] bg-transparent border-2 border-[#00B7FF] text-white">Let's Talk</a>
             </div>
             <div class="flex flex-wrap justify-center mt-[60px]">
                 <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
@@ -855,7 +815,7 @@
             <p class="max-w-[800px] mx-auto mb-[30px] text-[1.1rem] text-[#666]">Leading the future of technology with innovative solutions and expert training</p>
             
             <div class="flex flex-col lg:flex-row justify-center gap-[30px] mt-[50px]">
-                <div class="bg-[#f8f9fa] rounded-[10px] p-[30px] text-left flex-1 max-w-full lg:max-w-[350px] mb-8 lg:mb-0 transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
+                <div class="bg-[#f8f9fa] rounded-[10px] p-[30px] text-left flex-1 max-w-full lg:max-w-[350px] mb-8 lg:mb-0 transition-all duration-300 hover:-translate-y-[10px]">
                     <div class="w-[50px] h-[50px] bg-[#00B7FF] rounded-[10px] flex justify-center items-center mb-5">
                         <i class="fas fa-eye text-white text-2xl"></i>
                     </div>
@@ -866,7 +826,7 @@
                         <span>Global Technology Leadership</span>
                     </div>
                 </div>
-                <div class="bg-[#f8f9fa] rounded-[10px] p-[30px] text-left flex-1 max-w-full lg:max-w-[350px] transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
+                <div class="bg-[#f8f9fa] rounded-[10px] p-[30px] text-left flex-1 max-w-full lg:max-w-[350px] transition-all duration-300 hover:-translate-y-[10px]">
                     <div class="w-[50px] h-[50px] bg-[#00B7FF] rounded-[10px] flex justify-center items-center mb-5">
                         <i class="fas fa-bullseye text-white text-2xl"></i>
                     </div>
@@ -909,7 +869,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">
-                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-globe text-[#00B7FF] text-3xl"></i>
                     </div>
@@ -936,8 +896,8 @@
                     <a href="#web-design" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-mobile-alt text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">Android Development</h3>
@@ -963,8 +923,8 @@
                     <a href="#android-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-server text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px]">SaaS Development</h3>
@@ -990,8 +950,8 @@
                     <a href="#saas-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-code text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px]">MVP in 1 Week</h3>
@@ -1017,8 +977,8 @@
                     <a href="#mvp-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5 shadow-sm">
+                <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
                         <i class="fas fa-paint-brush text-[#00B7FF] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px]">100% Free Demo Design</h3>
@@ -1052,7 +1012,7 @@
         <div class="container mx-auto px-[10%]">
             <h2 class="text-4xl mb-5">Ready to Transform Your Business?</h2>
             <p class="max-w-[700px] mx-auto mb-[30px]">Let's discuss your project requirements and start something amazing together.</p>
-            <a href="#quote" class="inline-block bg-white text-[#00B7FF] py-[15px] px-[30px] rounded-[30px] font-semibold transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_20px_rgba(255,255,255,0.3)]">Get Free Quote</a>
+            <a href="#quote" class="inline-block bg-white text-[#00B7FF] py-[15px] px-[30px] rounded-[30px] font-semibold transition-all duration-300 hover:-translate-y-[3px]">Get Free Quote</a>
         </div>
     </section>
 
@@ -1063,8 +1023,8 @@
             <p class="mb-8 text-lg text-gray-600">Industry-ready coding programs designed for students to excel in their careers</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">
-                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
                         <i class="fas fa-laptop-code text-[#00B7FF] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">BCA Students</h3>
@@ -1078,8 +1038,8 @@
                     </a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
                         <i class="fas fa-cogs text-[#00B7FF] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">B.Tech Students</h3>
@@ -1093,8 +1053,8 @@
                     </a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
                         <i class="fas fa-graduation-cap text-[#00B7FF] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">MCA Students</h3>
@@ -1108,8 +1068,8 @@
                     </a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
                         <i class="fas fa-chalkboard-teacher text-[#00B7FF] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">Hands-on Training</h3>
@@ -1123,8 +1083,8 @@
                     </a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
                         <i class="fas fa-industry text-[#00B7FF] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-[15px]">Industry Mentors</h3>
@@ -1138,8 +1098,8 @@
                     </a>
                 </div>
                 
-                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-gray-100">
-                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6 shadow-sm">
+                <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
+                    <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
                         <i class="fas fa-certificate text-[#00B7FF] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-[15px]">Certification</h3>
@@ -1167,74 +1127,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#212529] text-[#adb5bd] py-[70px] pb-5">
-        <div class="container mx-auto px-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-[50px]">
-                <div class="max-w-[300px]">
-                    <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[120px] mb-4">
-                    <p>Pioneering technology solutions that transform businesses through cutting-edge software development and expert training.</p>
-                    <div class="flex gap-4 mt-5">
-                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
-                            <i class="fab fa-facebook-f text-white"></i>
-                        </a>
-                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
-                            <i class="fab fa-twitter text-white"></i>
-                        </a>
-                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
-                            <i class="fab fa-instagram text-white"></i>
-                        </a>
-                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
-                            <i class="fab fa-linkedin-in text-white"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-white text-[1.2rem] mb-5 font-semibold">Quick Links</h3>
-                    <ul class="list-none">
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Home</a></li>
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">About</a></li>
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Services</a></li>
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Team</a></li>
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-white text-[1.2rem] mb-5 font-semibold">Our Services</h3>
-                    <ul class="list-none">
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Web Development</a></li>
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Android Development</a></li>
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">SaaS Development</a></li>
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">MVP in 1 Week</a></li>
-                        <li class="mb-2.5"><a href="#" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-white text-[1.2rem] mb-5 font-semibold">Stay Updated</h3>
-                    <p>Subscribe to our newsletter for the latest updates and tech insights.</p>
-                    <form class="mt-4">
-                        <input type="email" placeholder="Your Email Address" class="p-3 rounded w-full">
-                        <button type="submit" class="bg-[#00B7FF] text-white border-0 p-3 rounded mt-2.5 cursor-pointer w-full">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="border-t border-[rgba(255,255,255,0.1)] pt-5 flex flex-col md:flex-row justify-between items-center text-[0.9rem]">
-                <p>© 2025 Comestro Techlabs Pvt. Ltd. All rights reserved.</p>
-                <div class="mt-4 md:mt-0">
-                    <a href="#" class="md:ml-5 mx-2.5 md:mx-0 text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Privacy Policy</a>
-                    <a href="#" class="md:ml-5 mx-2.5 md:mx-0 text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Particles.js Library for the technology particle effect -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <script>
         // Add any JavaScript you need here
@@ -1609,5 +1501,349 @@
             });
         });
     </script>
-</body>
-</html>
+@endsection
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    // Initialize particles.js
+    if(document.getElementById('particles-js')) {
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#00B7FF"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00B7FF",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    }
+    
+    // Create tech circles animation
+    const techCirclesContainer = document.querySelector('.tech-circles');
+    if (techCirclesContainer) {
+        // Create technology-themed circles
+        for (let i = 0; i < 15; i++) {
+            createTechCircle();
+        }
+        
+        // Create glowing effects
+        for (let i = 0; i < 5; i++) {
+            createGlowEffect();
+        }
+    }
+    
+    // Create neural network animation
+    const neuralNetworkContainer = document.querySelector('.neural-network');
+    if (neuralNetworkContainer) {
+        createNeuralNetwork();
+    }
+    
+    function createTechCircle() {
+        const circle = document.createElement('div');
+        circle.classList.add('tech-circle');
+        
+        // Random size between 50px and 200px
+        const size = Math.random() * 150 + 50;
+        circle.style.width = `${size}px`;
+        circle.style.height = `${size}px`;
+        
+        // Random position
+        const left = Math.random() * 100;
+        const top = Math.random() * 100;
+        circle.style.left = `${left}%`;
+        circle.style.top = `${top}%`;
+        
+        // Random animation delay
+        circle.style.animationDelay = `${Math.random() * 5}s`;
+        
+        techCirclesContainer.appendChild(circle);
+    }
+    
+    function createGlowEffect() {
+        const glow = document.createElement('div');
+        glow.classList.add('glow');
+        
+        // Random size between 100px and 300px
+        const size = Math.random() * 200 + 100;
+        glow.style.width = `${size}px`;
+        glow.style.height = `${size}px`;
+        
+        // Random position
+        const left = Math.random() * 100;
+        const top = Math.random() * 100;
+        glow.style.left = `${left}%`;
+        glow.style.top = `${top}%`;
+        
+        // Random animation delay
+        glow.style.animationDelay = `${Math.random() * 5}s`;
+        
+        techCirclesContainer.appendChild(glow);
+    }
+    
+    function createNeuralNetwork() {
+        // Create nodes for the neural network
+        const nodeCount = 20; // Number of nodes in the network
+        const nodes = [];
+        
+        // Create nodes (neurons)
+        for (let i = 0; i < nodeCount; i++) {
+            const node = document.createElement('div');
+            node.classList.add('node');
+            
+            // Position nodes randomly within the container
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            node.style.left = `${x}%`;
+            node.style.top = `${y}%`;
+            
+            // Add random animation delay
+            node.style.animationDelay = `${Math.random() * 5}s`;
+            
+            neuralNetworkContainer.appendChild(node);
+            nodes.push({ element: node, x, y });
+        }
+        
+        // Create connections between nodes
+        for (let i = 0; i < nodes.length; i++) {
+            // Each node connects to 2-4 other nodes
+            const connectionCount = Math.floor(Math.random() * 3) + 2;
+            
+            for (let j = 0; j < connectionCount; j++) {
+                // Connect to a random node
+                const targetIndex = Math.floor(Math.random() * nodes.length);
+                if (targetIndex !== i) { // Don't connect to self
+                    createConnection(nodes[i], nodes[targetIndex]);
+                }
+            }
+        }
+        
+        // Create synapse pulses
+        for (let i = 0; i < 10; i++) {
+            createSynapsePulse();
+        }
+        
+        // Animate data particles along connections periodically
+        setInterval(() => {
+            // Choose random nodes for data transfer
+            const sourceIndex = Math.floor(Math.random() * nodes.length);
+            const targetIndex = Math.floor(Math.random() * nodes.length);
+            
+            if (sourceIndex !== targetIndex) {
+                createDataParticle(nodes[sourceIndex], nodes[targetIndex]);
+            }
+        }, 300);
+    }
+    
+    function createConnection(sourceNode, targetNode) {
+        const connection = document.createElement('div');
+        connection.classList.add('connection');
+        
+        // Calculate position and dimensions
+        const sourceX = parseFloat(sourceNode.x);
+        const sourceY = parseFloat(sourceNode.y);
+        const targetX = parseFloat(targetNode.x);
+        const targetY = parseFloat(targetNode.y);
+        
+        // Calculate distance and angle
+        const dx = targetX - sourceX;
+        const dy = targetY - sourceY;
+        const length = Math.sqrt(dx * dx + dy * dy);
+        const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+        
+        // Position the connection
+        connection.style.width = `${length}%`;
+        connection.style.left = `${sourceX}%`;
+        connection.style.top = `${sourceY}%`;
+        connection.style.transform = `rotate(${angle}deg)`;
+        
+        // Random animation delay
+        connection.style.animationDelay = `${Math.random() * 4}s`;
+        
+        neuralNetworkContainer.appendChild(connection);
+        return { element: connection, sourceNode, targetNode, length, angle };
+    }
+    
+    function createDataParticle(sourceNode, targetNode) {
+        const particle = document.createElement('div');
+        particle.classList.add('data-particle');
+        
+        // Set starting position (at source node)
+        const startX = parseFloat(sourceNode.x);
+        const startY = parseFloat(sourceNode.y);
+        particle.style.left = `${startX}%`;
+        particle.style.top = `${startY}%`;
+        
+        // Calculate end position (at target node)
+        const endX = parseFloat(targetNode.x) - startX;
+        const endY = parseFloat(targetNode.y) - startY;
+        
+        // Set custom properties for the animation
+        particle.style.setProperty('--endX', `${endX}%`);
+        particle.style.setProperty('--endY', `${endY}%`);
+        
+        neuralNetworkContainer.appendChild(particle);
+        
+        // Remove particle after animation completes
+        setTimeout(() => {
+            neuralNetworkContainer.removeChild(particle);
+        }, 3000);
+    }
+    
+    function createSynapsePulse() {
+        const pulse = document.createElement('div');
+        pulse.classList.add('synapse-pulse');
+        
+        // Random position
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        pulse.style.left = `${x}%`;
+        pulse.style.top = `${y}%`;
+        
+        // Random animation delay
+        pulse.style.animationDelay = `${Math.random() * 10}s`;
+        
+        neuralNetworkContainer.appendChild(pulse);
+    }
+    
+    // Count-up animation for stats
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    statNumbers.forEach(statNumber => {
+        const targetValue = parseInt(statNumber.textContent);
+        const duration = 2000; // 2 seconds
+        const startTime = Date.now();
+        const endValue = targetValue;
+        
+        function updateNumber() {
+            const currentTime = Date.now();
+            const elapsedTime = currentTime - startTime;
+            
+            if (elapsedTime < duration) {
+                const percentage = elapsedTime / duration;
+                // Easing function for smooth count-up
+                const easeOutQuad = percentage * (2 - percentage);
+                const currentValue = Math.floor(easeOutQuad * endValue);
+                
+                // Add "+" at the end if it was there in the original text
+                statNumber.textContent = statNumber.textContent.includes('+') 
+                    ? currentValue + '+' 
+                    : currentValue + (statNumber.textContent.includes('%') ? '%' : '');
+                
+                requestAnimationFrame(updateNumber);
+            } else {
+                // Ensure we end exactly on the target value
+                statNumber.textContent = statNumber.textContent.includes('+') 
+                    ? endValue + '+' 
+                    : endValue + (statNumber.textContent.includes('%') ? '%' : '');
+            }
+        }
+        
+        // Start animation on scroll
+        const observer = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting) {
+                updateNumber();
+                observer.disconnect();
+            }
+        }, { threshold: 0.5 });
+        
+        observer.observe(statNumber);
+    });
+</script>
+@endsection

@@ -27,13 +27,53 @@ class PageController extends Controller
     }
 
     /**
-     * Show the training page.
+     * Show the training overview page.
      *
      * @return \Illuminate\View\View
      */
     public function training()
     {
         return view('training');
+    }
+    
+    /**
+     * Show the training courses page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function trainingCourses()
+    {
+        return view('training.courses');
+    }
+    
+    /**
+     * Show the training workshops page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function trainingWorkshops()
+    {
+        return view('training.workshops');
+    }
+    
+    /**
+     * Show the training placements page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function trainingPlacements()
+    {
+        return view('training.placements');
+    }
+    
+    /**
+     * Show the training achievements page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function trainingAchievements()
+    {
+        return view('training.achievements');
     }
 
     /**
@@ -64,5 +104,25 @@ class PageController extends Controller
     public function portfolio()
     {
         return view('portfolio');
+    }
+    
+    /**
+     * Show the Game Zone Management Software page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function gameZoneManagement()
+    {
+        return view('services.game-zone');
+    }
+    
+    /**
+     * Show the Hospital Appointment System page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function hospitalAppointmentSystem()
+    {
+        return view('services.hospital');
     }
 }
