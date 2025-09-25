@@ -6,6 +6,7 @@
     <title>@yield('title') - Comestro - Innovating Technology, Empowering People</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('css/brand-colors.css') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * {
@@ -68,7 +69,7 @@
         }
         
         .nav-menu a:hover {
-            color: #00B7FF;
+            color: #0079C1;
         }
         
         .header-buttons {
@@ -85,19 +86,24 @@
         
         .btn-free-demo {
             background-color: transparent;
-            border: 1px solid #00B7FF;
-            color: #00B7FF;
+            border: 1px solid #0079C1;
+            color: #0079C1;
         }
         
         .btn-signin {
-            background-color: #00B7FF;
+            background-color: #F05A28;
             color: #fff;
-            border: 1px solid #00B7FF;
+            border: 1px solid #F05A28;
         }
         
-        .btn-free-demo:hover, .btn-signin:hover {
+        .btn-free-demo:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 183, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 121, 193, 0.3);
+        }
+        
+        .btn-signin:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(240, 90, 40, 0.3);
         }
         
         /* Page Header Styles */
@@ -156,7 +162,7 @@
         }
         
         .footer-links a:hover {
-            color: #00B7FF;
+            color: #0079C1;
         }
         
         .footer-social {
@@ -177,7 +183,7 @@
         }
         
         .social-icon:hover {
-            background-color: #00B7FF;
+            background-color: #F05A28;
             transform: translateY(-3px);
         }
         
@@ -229,10 +235,10 @@
                 <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[140px] lg:w-[180px]">
             </a>
             <ul class="hidden lg:flex list-none">
-                <li class="ml-[30px]"><a href="/" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Home</a></li>
-                <li class="ml-[30px]"><a href="{{ route('about') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">About Us</a></li>
+                <li class="ml-[30px]"><a href="/" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Home</a></li>
+                <li class="ml-[30px]"><a href="{{ route('about') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">About Us</a></li>
                 <li class="ml-[30px] relative group">
-                    <a href="{{ route('services') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300 flex items-center">
+                    <a href="{{ route('services') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300 flex items-center">
                         Services <i class="fas fa-chevron-down text-xs ml-1 mt-1 transition-transform duration-300 group-hover:rotate-180"></i>
                     </a>
                     <div class="absolute left-0 mt-2 w-64 rounded-md bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right z-50">
@@ -243,14 +249,14 @@
                         </div>
                     </div>
                 </li>
-                <li class="ml-[30px]"><a href="{{ route('portfolio') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Portfolio</a></li>
-                <li class="ml-[30px]"><a href="{{ route('training') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
-                <li class="ml-[30px]"><a href="{{ route('careers') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Careers</a></li>
-                <li class="ml-[30px]"><a href="{{ route('contact') }}" class="text-[#555] font-medium hover:text-[#00B7FF] transition-colors duration-300">Contact</a></li>
+                <li class="ml-[30px]"><a href="{{ route('portfolio') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Portfolio</a></li>
+                <li class="ml-[30px]"><a href="{{ route('training') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Training</a></li>
+                <li class="ml-[30px]"><a href="{{ route('careers') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Careers</a></li>
+                <li class="ml-[30px]"><a href="{{ route('contact') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Contact</a></li>
             </ul>
             <div class="hidden md:flex">
-                <a href="#demo" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#00B7FF] text-[#00B7FF] bg-transparent">Free Demo</a>
-                <a href="#signin" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#00B7FF] bg-[#00B7FF] text-white">Sign In</a>
+                <a href="#demo" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#0079C1] text-[#0079C1] bg-transparent">Free Demo</a>
+                <a href="#signin" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#F05A28] bg-[#F05A28] text-white">Sign In</a>
             </div>
             <button class="lg:hidden text-[#555] focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -266,19 +272,18 @@
         <div class="container mx-auto px-[10%]">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-[50px]">
                 <div class="max-w-[300px]">
-                    <img src="{{ asset('comestro.png') }}" alt="Comestro" class="w-[120px] mb-4">
                     <p>Pioneering technology solutions that transform businesses through cutting-edge software development and expert training.</p>
                     <div class="flex gap-4 mt-5">
-                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
+                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#F05A28] hover:-translate-y-[3px]">
                             <i class="fab fa-facebook-f text-white"></i>
                         </a>
-                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
+                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#F05A28] hover:-translate-y-[3px]">
                             <i class="fab fa-twitter text-white"></i>
                         </a>
-                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
+                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#F05A28] hover:-translate-y-[3px]">
                             <i class="fab fa-instagram text-white"></i>
                         </a>
-                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#00B7FF] hover:-translate-y-[3px]">
+                        <a href="#" class="w-[35px] h-[35px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center transition-all duration-300 hover:bg-[#F05A28] hover:-translate-y-[3px]">
                             <i class="fab fa-linkedin-in text-white"></i>
                         </a>
                     </div>
@@ -287,26 +292,26 @@
                 <div>
                     <h3 class="text-white text-[1.2rem] mb-5 font-semibold">Quick Links</h3>
                     <ul class="list-none">
-                        <li class="mb-2.5"><a href="/" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Home</a></li>
-                        <li class="mb-2.5"><a href="{{ route('about') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">About</a></li>
-                        <li class="mb-2.5"><a href="{{ route('services') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Services</a></li>
-                        <li class="mb-2.5"><a href="{{ route('portfolio') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Portfolio</a></li>
-                        <li class="mb-2.5"><a href="{{ route('training') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
-                        <li class="mb-2.5"><a href="{{ route('careers') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Careers</a></li>
-                        <li class="mb-2.5"><a href="{{ route('contact') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Contact</a></li>
+                        <li class="mb-2.5"><a href="/" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Home</a></li>
+                        <li class="mb-2.5"><a href="{{ route('about') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">About</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Services</a></li>
+                        <li class="mb-2.5"><a href="{{ route('portfolio') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Portfolio</a></li>
+                        <li class="mb-2.5"><a href="{{ route('training') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Training</a></li>
+                        <li class="mb-2.5"><a href="{{ route('careers') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Careers</a></li>
+                        <li class="mb-2.5"><a href="{{ route('contact') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-white text-[1.2rem] mb-5 font-semibold">Our Services</h3>
                     <ul class="list-none">
-                        <li class="mb-2.5"><a href="{{ route('services') }}#web-design" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Web Development</a></li>
-                        <li class="mb-2.5"><a href="{{ route('services') }}#android-dev" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Android Development</a></li>
-                        <li class="mb-2.5"><a href="{{ route('services') }}#saas-dev" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">SaaS Development</a></li>
-                        <li class="mb-2.5"><a href="{{ route('services') }}#mvp-dev" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">MVP in 1 Week</a></li>
-                        <li class="mb-2.5"><a href="{{ route('services.game-zone') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Game Zone Management</a></li>
-                        <li class="mb-2.5"><a href="{{ route('services.hospital') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Hospital Appointment</a></li>
-                        <li class="mb-2.5"><a href="{{ route('training') }}" class="text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Training</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services') }}#web-design" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Web Development</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services') }}#android-dev" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Android Development</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services') }}#saas-dev" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">SaaS Development</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services') }}#mvp-dev" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">MVP in 1 Week</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services.game-zone') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Game Zone Management</a></li>
+                        <li class="mb-2.5"><a href="{{ route('services.hospital') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Hospital Appointment</a></li>
+                        <li class="mb-2.5"><a href="{{ route('training') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Training</a></li>
                     </ul>
                 </div>
                 
@@ -315,7 +320,7 @@
                     <p>Subscribe to our newsletter for the latest updates and tech insights.</p>
                     <form class="mt-4">
                         <input type="email" placeholder="Your Email Address" class="p-3 rounded w-full">
-                        <button type="submit" class="bg-[#00B7FF] text-white border-0 p-3 rounded mt-2.5 cursor-pointer w-full">Subscribe</button>
+                        <button type="submit" class="bg-[#F05A28] text-white border-0 p-3 rounded mt-2.5 cursor-pointer w-full">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -323,8 +328,8 @@
             <div class="border-t border-[rgba(255,255,255,0.1)] pt-5 flex flex-col md:flex-row justify-between items-center text-[0.9rem]">
                 <p>© 2025 Comestro Techlabs Pvt. Ltd. All rights reserved.</p>
                 <div class="mt-4 md:mt-0">
-                    <a href="#" class="md:ml-5 mx-2.5 md:mx-0 text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Privacy Policy</a>
-                    <a href="#" class="md:ml-5 mx-2.5 md:mx-0 text-[#adb5bd] hover:text-[#00B7FF] transition-colors duration-300">Terms of Service</a>
+                    <a href="#" class="md:ml-5 mx-2.5 md:mx-0 text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="md:ml-5 mx-2.5 md:mx-0 text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -345,19 +350,19 @@
                             <form id="quoteForm" class="space-y-4">
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                                    <input type="text" name="name" id="name" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]" required>
+                                    <input type="text" name="name" id="name" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#0079C1] focus:border-[#0079C1]" required>
                                 </div>
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                                    <input type="email" name="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]" required>
+                                    <input type="email" name="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#0079C1] focus:border-[#0079C1]" required>
                                 </div>
                                 <div>
                                     <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-                                    <input type="tel" name="phone" id="phone" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]" required>
+                                    <input type="tel" name="phone" id="phone" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#0079C1] focus:border-[#0079C1]" required>
                                 </div>
                                 <div>
                                     <label for="service" class="block text-sm font-medium text-gray-700">Service</label>
-                                    <select name="service" id="service" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]">
+                                    <select name="service" id="service" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#0079C1] focus:border-[#0079C1]">
                                         <option value="" selected disabled>Select a Service</option>
                                         <option value="game-zone">Game Zone Management Software</option>
                                         <option value="hospital">Hospital Appointment System</option>
@@ -369,14 +374,14 @@
                                 </div>
                                 <div>
                                     <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                                    <textarea name="message" id="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#00B7FF] focus:border-[#00B7FF]" required></textarea>
+                                    <textarea name="message" id="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-[#0079C1] focus:border-[#0079C1]" required></textarea>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                    <button type="button" id="submitQuoteBtn" class="w-full inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-[#00B7FF] text-base font-medium text-white hover:bg-[#0099CC] focus:outline-none sm:ml-3 sm:w-auto sm:text-sm">Submit</button>
+                    <button type="button" id="submitQuoteBtn" class="w-full inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-[#F05A28] text-base font-medium text-white hover:bg-[#D84315] focus:outline-none sm:ml-3 sm:w-auto sm:text-sm">Submit</button>
                     <button type="button" id="closeModalBtn" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
                 </div>
             </div>

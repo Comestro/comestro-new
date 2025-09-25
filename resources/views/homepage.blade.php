@@ -6,7 +6,7 @@
 <style>
         /* Hero Section Styles */
         .hero {
-            background: linear-gradient(135deg, rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.8)), url('/images/hero-bg.jpg');
+            background: linear-gradient(135deg, rgba(0, 121, 193, 0.9), rgba(240, 90, 40, 0.8)), url('/images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -64,7 +64,7 @@
         }
         
         .nav-menu a:hover {
-            color: #00B7FF;
+            color: #0079C1;
         }
         
         .header-buttons {
@@ -81,24 +81,29 @@
         
         .btn-free-demo {
             background-color: transparent;
-            border: 1px solid #00B7FF;
-            color: #00B7FF;
+            border: 1px solid #0079C1;
+            color: #0079C1;
         }
         
         .btn-signin {
-            background-color: #00B7FF;
+            background-color: #F05A28;
             color: #fff;
-            border: 1px solid #00B7FF;
+            border: 1px solid #F05A28;
         }
         
-        .btn-free-demo:hover, .btn-signin:hover {
+        .btn-free-demo:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 183, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 121, 193, 0.3);
+        }
+        
+        .btn-signin:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(240, 90, 40, 0.3);
         }
         
         /* Hero Section Styles */
         .hero {
-            background: linear-gradient(135deg, rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.8)), url('/images/hero-bg.jpg');
+            background: linear-gradient(135deg, rgba(0, 121, 193, 0.9), rgba(240, 90, 40, 0.8)), url('/images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -286,7 +291,7 @@
         }
         
         .hero h1 .highlight {
-            color: #00B7FF;
+            color: #0079C1;
         }
         
         .hero h2 {
@@ -317,13 +322,13 @@
         }
         
         .btn-primary {
-            background-color: #00B7FF;
+            background-color: #0079C1;
             color: white;
         }
         
         .btn-secondary {
             background-color: transparent;
-            border: 2px solid #00B7FF;
+            border: 2px solid #0079C1;
             color: white;
         }
         
@@ -346,7 +351,7 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #00B7FF;
+            color: #0079C1;
             margin-bottom: 5px;
         }
         
@@ -369,7 +374,7 @@
         }
         
         .section-title .highlight {
-            color: #00B7FF;
+            color: #0079C1;
         }
         
         .about p {
@@ -404,7 +409,7 @@
         .value-icon {
             width: 50px;
             height: 50px;
-            background-color: #00B7FF;
+            background-color: #0079C1;
             border-radius: 10px;
             display: flex;
             justify-content: center;
@@ -435,7 +440,7 @@
         }
         
         .feature-icon {
-            color: #00B7FF;
+            color: #0079C1;
             margin-right: 10px;
         }
         
@@ -453,7 +458,7 @@
         .value-stat-number {
             font-size: 2rem;
             font-weight: 700;
-            color: #00B7FF;
+            color: #0079C1;
         }
         
         .value-stat-text {
@@ -505,7 +510,7 @@
         }
         
         .service-icon i {
-            color: #00B7FF;
+            color: #0079C1;
             font-size: 32px;
         }
         
@@ -528,7 +533,7 @@
         .service-link {
             display: inline-block;
             margin-top: 20px;
-            color: #00B7FF;
+            color: #0079C1;
             font-weight: 500;
         }
         
@@ -538,7 +543,7 @@
         
         /* CTA Section */
         .cta {
-            background: linear-gradient(135deg, #00B7FF, #0099CC);
+            background: linear-gradient(135deg, #0079C1, #0099CC);
             padding: 70px 0;
             text-align: center;
             color: white;
@@ -556,7 +561,7 @@
         
         .btn-cta {
             background-color: white;
-            color: #00B7FF;
+            color: #0079C1;
             padding: 15px 30px;
             border-radius: 30px;
             font-weight: 600;
@@ -607,7 +612,7 @@
         }
         
         .training-icon i {
-            color: #00B7FF;
+            color: #0079C1;
             font-size: 28px;
         }
         
@@ -631,7 +636,7 @@
         }
         
         .btn-view-details {
-            color: #00B7FF;
+            color: #0079C1;
             font-weight: 500;
             display: inline-flex;
             align-items: center;
@@ -655,8 +660,8 @@
         
         .btn-outlined {
             padding: 12px 25px;
-            border: 2px solid #00B7FF;
-            color: #00B7FF;
+            border: 2px solid #0079C1;
+            color: #0079C1;
             border-radius: 30px;
             font-weight: 500;
             margin: 0 10px;
@@ -665,7 +670,7 @@
         }
         
         .btn-outlined:hover {
-            background-color: #00B7FF;
+            background-color: #0079C1;
             color: white;
         }
         
@@ -713,7 +718,7 @@
         }
         
         .footer-links a:hover {
-            color: #00B7FF;
+            color: #0079C1;
         }
         
         .footer-social {
@@ -734,7 +739,7 @@
         }
         
         .social-icon:hover {
-            background-color: #00B7FF;
+            background-color: #0079C1;
             transform: translateY(-3px);
         }
         
@@ -784,24 +789,24 @@
         <div class="tech-circles"></div>
         <div class="neural-network"></div>
         <div class="container mx-auto px-5 relative z-10">
-            <h1 class="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] mb-2.5 leading-tight">Innovating <span class="text-[#00B7FF]">Technology</span>,<br>Empowering People</h1>
+            <h1 class="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] mb-2.5 leading-tight">Innovating <span class="text-[#F05A28]">Technology</span>,<br>Empowering <span class="text-[#0079C1]">People</span></h1>
             <h2 class="text-[1.3rem] md:text-[1.5rem] lg:text-[1.8rem] font-semibold mb-5 text-[#ddd]">Software Development | Web Solutions | IT Training</h2>
             <p class="text-base md:text-lg lg:text-xl max-w-[800px] mx-auto mb-[30px] text-[#bbb] px-4">We create world-class technology solutions that transform businesses and empower individuals through innovative software development and industry-ready training programs.</p>
             <div class="mt-[30px] flex flex-col sm:flex-row justify-center">
-                <a href="#design" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 mb-4 sm:mb-0 transition-all duration-300 hover:-translate-y-[3px] bg-[#00B7FF] text-white">Get Free Demo Design</a>
-                <a href="#talk" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 transition-all duration-300 hover:-translate-y-[3px] bg-transparent border-2 border-[#00B7FF] text-white">Let's Talk</a>
+                <a href="#design" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 mb-4 sm:mb-0 transition-all duration-300 hover:-translate-y-[3px] bg-[#F05A28] text-white">Get Free Demo Design</a>
+                <a href="#talk" class="inline-block py-[12px] sm:py-[15px] px-[20px] sm:px-[30px] rounded-[30px] font-semibold mx-2.5 transition-all duration-300 hover:-translate-y-[3px] bg-transparent border-2 border-[#0079C1] text-white">Let's Talk</a>
             </div>
             <div class="flex flex-wrap justify-center mt-[60px]">
                 <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
-                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#00B7FF] mb-[5px] stat-number">500+</div>
+                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#0079C1] mb-[5px] stat-number">500+</div>
                     <div class="text-[#ddd] text-base stat-text">Projects Completed</div>
                 </div>
                 <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
-                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#00B7FF] mb-[5px] stat-number">100+</div>
+                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#0079C1] mb-[5px] stat-number">100+</div>
                     <div class="text-[#ddd] text-base stat-text">Expert Developers</div>
                 </div>
                 <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
-                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#00B7FF] mb-[5px] stat-number">98%</div>
+                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#0079C1] mb-[5px] stat-number">98%</div>
                     <div class="text-[#ddd] text-base stat-text">Client Satisfaction</div>
                 </div>
             </div>
@@ -811,29 +816,29 @@
     <!-- About Section -->
     <section class="py-[100px] text-center" id="about">
         <div class="container mx-auto px-5">
-            <h2 class="text-[2.5rem] mb-[50px] relative inline-block">About <span class="text-[#00B7FF]">Comestro Techlabs</span></h2>
+            <h2 class="text-[2.5rem] mb-[50px] relative inline-block">About <span class="text-[#0079C1]">Comestro Techlabs</span></h2>
             <p class="max-w-[800px] mx-auto mb-[30px] text-[1.1rem] text-[#666]">Leading the future of technology with innovative solutions and expert training</p>
             
             <div class="flex flex-col lg:flex-row justify-center gap-[30px] mt-[50px]">
                 <div class="bg-[#f8f9fa] rounded-[10px] p-[30px] text-left flex-1 max-w-full lg:max-w-[350px] mb-8 lg:mb-0 transition-all duration-300 hover:-translate-y-[10px]">
-                    <div class="w-[50px] h-[50px] bg-[#00B7FF] rounded-[10px] flex justify-center items-center mb-5">
+                    <div class="w-[50px] h-[50px] bg-[#0079C1] rounded-[10px] flex justify-center items-center mb-5">
                         <i class="fas fa-eye text-white text-2xl"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-[15px]">Our Vision</h3>
                     <p class="text-[#666] leading-[1.7]">To create cutting-edge technology solutions that transform businesses and empower individuals to achieve their digital aspirations through cutting-edge innovative and excellence.</p>
                     <div class="flex items-center mb-2.5">
-                        <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                        <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                         <span>Global Technology Leadership</span>
                     </div>
                 </div>
                 <div class="bg-[#f8f9fa] rounded-[10px] p-[30px] text-left flex-1 max-w-full lg:max-w-[350px] transition-all duration-300 hover:-translate-y-[10px]">
-                    <div class="w-[50px] h-[50px] bg-[#00B7FF] rounded-[10px] flex justify-center items-center mb-5">
+                    <div class="w-[50px] h-[50px] bg-[#0079C1] rounded-[10px] flex justify-center items-center mb-5">
                         <i class="fas fa-bullseye text-white text-2xl"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-[15px]">Our Mission</h3>
                     <p class="text-[#666] leading-[1.7]">To deliver high-quality software solutions, provide impactful training programs, and foster long-term growth for our clients and students through dedication, expertise, and commitment.</p>
                     <div class="flex items-center mb-2.5">
-                        <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                        <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                         <span>Excellence in Every Project</span>
                     </div>
                 </div>
@@ -841,19 +846,19 @@
             
             <div class="flex flex-wrap justify-center mt-[70px] gap-x-[20px] md:gap-x-[50px] gap-y-[30px]">
                 <div class="text-center w-[calc(50%-20px)] md:w-auto">
-                    <div class="text-[2rem] font-bold text-[#00B7FF]">5+</div>
+                    <div class="text-[2rem] font-bold text-[#0079C1]">5+</div>
                     <div class="text-[#666] text-[0.9rem]">Years Experience</div>
                 </div>
                 <div class="text-center w-[calc(50%-20px)] md:w-auto">
-                    <div class="text-[2rem] font-bold text-[#00B7FF]">50+</div>
+                    <div class="text-[2rem] font-bold text-[#0079C1]">50+</div>
                     <div class="text-[#666] text-[0.9rem]">Expert Developers</div>
                 </div>
                 <div class="text-center w-[calc(50%-20px)] md:w-auto">
-                    <div class="text-[2rem] font-bold text-[#00B7FF]">24/7</div>
+                    <div class="text-[2rem] font-bold text-[#0079C1]">24/7</div>
                     <div class="text-[#666] text-[0.9rem]">Support Available</div>
                 </div>
                 <div class="text-center w-[calc(50%-20px)] md:w-auto">
-                    <div class="text-[2rem] font-bold text-[#00B7FF]">100%</div>
+                    <div class="text-[2rem] font-bold text-[#0079C1]">100%</div>
                     <div class="text-[#666] text-[0.9rem]">Quality Assured</div>
                 </div>
             </div>
@@ -863,7 +868,7 @@
     <!-- Services Section -->
     <section class="bg-gradient-to-b from-white to-[#f8f9fa] py-[100px] text-center" id="services">
         <div class="container mx-auto px-[10%]">
-            <h2 class="text-[2.5rem] mb-[50px] relative inline-block font-bold">Our <span class="text-[#00B7FF]">Services</span></h2>
+            <h2 class="text-[2.5rem] mb-[50px] relative inline-block font-bold">Our <span class="text-[#0079C1]">Services</span></h2>
             <div class="max-w-[800px] mx-auto mb-[50px]">
                 <p class="text-lg text-gray-600">Comprehensive technology solutions designed to transform your business</p>
             </div>
@@ -871,244 +876,244 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">
                 <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
-                        <i class="fas fa-globe text-[#00B7FF] text-3xl"></i>
+                        <i class="fas fa-globe text-[#0079C1] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px]">Web Designing</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Create, implement, and maintain websites with seamless user experience.</p>
                     <div class="mt-5">
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Responsive Design</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>UI/UX Integration</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Fast Loading</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>SEO Ready</span>
                         </div>
                     </div>
-                    <a href="#web-design" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
+                    <a href="#web-design" class="inline-block mt-5 text-[#0079C1] font-medium hover:underline">Learn More</a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
-                        <i class="fas fa-mobile-alt text-[#00B7FF] text-3xl"></i>
+                        <i class="fas fa-mobile-alt text-[#0079C1] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px] text-gray-800">Android Development</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Scalable and powerful mobile apps built with latest Android technologies.</p>
                     <div class="mt-5">
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Native Android</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Cross Platform</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Performance Optimized</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>App Testing</span>
                         </div>
                     </div>
-                    <a href="#android-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
+                    <a href="#android-dev" class="inline-block mt-5 text-[#0079C1] font-medium hover:underline">Learn More</a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
-                        <i class="fas fa-server text-[#00B7FF] text-3xl"></i>
+                        <i class="fas fa-server text-[#0079C1] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px]">SaaS Development</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Cloud based solutions designed to improve your business growth and efficiency.</p>
                     <div class="mt-5">
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Scalable Architecture</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Cloud Integration</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>API Development</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Data Management</span>
                         </div>
                     </div>
-                    <a href="#saas-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
+                    <a href="#saas-dev" class="inline-block mt-5 text-[#0079C1] font-medium hover:underline">Learn More</a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
-                        <i class="fas fa-code text-[#00B7FF] text-3xl"></i>
+                        <i class="fas fa-code text-[#0079C1] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px]">MVP in 1 Week</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Launch your minimum viable product quickly for market validation and rapid development.</p>
                     <div class="mt-5">
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Rapid Prototyping</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Agile Development</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Core Features</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Market Ready</span>
                         </div>
                     </div>
-                    <a href="#mvp-dev" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
+                    <a href="#mvp-dev" class="inline-block mt-5 text-[#0079C1] font-medium hover:underline">Learn More</a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-10 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[70px] h-[70px] bg-[#f1f8ff] rounded-[20px] flex justify-center items-center mb-5">
-                        <i class="fas fa-paint-brush text-[#00B7FF] text-3xl"></i>
+                        <i class="fas fa-paint-brush text-[#0079C1] text-3xl"></i>
                     </div>
                     <h3 class="text-[1.4rem] font-semibold mb-[15px]">100% Free Demo Design</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Experience our design expertise with a free sample before making any commitment.</p>
                     <div class="mt-5">
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>No Commitment</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Professional Design</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Feedback Integration</span>
                         </div>
                         <div class="flex items-center mb-2.5">
-                            <i class="fas fa-check text-[#00B7FF] mr-2.5"></i>
+                            <i class="fas fa-check text-[#0079C1] mr-2.5"></i>
                             <span>Design Consultation</span>
                         </div>
                     </div>
-                    <a href="#free-demo" class="inline-block mt-5 text-[#00B7FF] font-medium hover:underline">Learn More</a>
+                    <a href="#free-demo" class="inline-block mt-5 text-[#0079C1] font-medium hover:underline">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- CTA Section -->
-    <section class="bg-gradient-to-br from-[#00B7FF] to-[#0099CC] py-[70px] text-center text-white">
+    <section class="bg-gradient-to-br from-[#0079C1] to-[#0099CC] py-[70px] text-center text-white">
         <div class="container mx-auto px-[10%]">
             <h2 class="text-4xl mb-5">Ready to Transform Your Business?</h2>
             <p class="max-w-[700px] mx-auto mb-[30px]">Let's discuss your project requirements and start something amazing together.</p>
-            <a href="#quote" class="inline-block bg-white text-[#00B7FF] py-[15px] px-[30px] rounded-[30px] font-semibold transition-all duration-300 hover:-translate-y-[3px]">Get Free Quote</a>
+            <a href="#quote" class="inline-block bg-white text-[#0079C1] py-[15px] px-[30px] rounded-[30px] font-semibold transition-all duration-300 hover:-translate-y-[3px]">Get Free Quote</a>
         </div>
     </section>
 
     <!-- Training Programs Section -->
     <section class="py-[100px] text-center bg-gradient-to-b from-white to-[#f8f9fa]" id="training">
         <div class="container mx-auto px-[10%]">
-            <h2 class="text-[2.5rem] mb-[50px] relative inline-block font-bold">Software Engineer <span class="text-[#00B7FF]">Training Programs</span></h2>
+            <h2 class="text-[2.5rem] mb-[50px] relative inline-block font-bold">Software Engineer <span class="text-[#0079C1]">Training Programs</span></h2>
             <p class="mb-8 text-lg text-gray-600">Industry-ready coding programs designed for students to excel in their careers</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[50px]">
                 <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
-                        <i class="fas fa-laptop-code text-[#00B7FF] text-[28px]"></i>
+                        <i class="fas fa-laptop-code text-[#0079C1] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">BCA Students</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Specialized programming foundation for Bachelor of Computer Applications students.</p>
                     <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
-                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#00B7FF]"></i> 4 months</span>
-                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> Basic</span>
+                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#0079C1]"></i> 4 months</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#0079C1]"></i> Basic</span>
                     </div>
-                    <a href="#bca-details" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline group">
+                    <a href="#bca-details" class="text-[#0079C1] font-medium inline-flex items-center hover:underline group">
                         View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
                     </a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
-                        <i class="fas fa-cogs text-[#00B7FF] text-[28px]"></i>
+                        <i class="fas fa-cogs text-[#0079C1] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">B.Tech Students</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Advanced software engineering concepts for engineering students.</p>
                     <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
-                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#00B7FF]"></i> 6 Months</span>
-                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> Intermediate</span>
+                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#0079C1]"></i> 6 Months</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#0079C1]"></i> Intermediate</span>
                     </div>
-                    <a href="#btech-details" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline group">
+                    <a href="#btech-details" class="text-[#0079C1] font-medium inline-flex items-center hover:underline group">
                         View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
                     </a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
-                        <i class="fas fa-graduation-cap text-[#00B7FF] text-[28px]"></i>
+                        <i class="fas fa-graduation-cap text-[#0079C1] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">MCA Students</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Project management skills for Master of Computer Applications students.</p>
                     <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
-                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#00B7FF]"></i> 3 Months</span>
-                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> Advanced</span>
+                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#0079C1]"></i> 3 Months</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#0079C1]"></i> Advanced</span>
                     </div>
-                    <a href="#mca-details" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline group">
+                    <a href="#mca-details" class="text-[#0079C1] font-medium inline-flex items-center hover:underline group">
                         View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
                     </a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
-                        <i class="fas fa-chalkboard-teacher text-[#00B7FF] text-[28px]"></i>
+                        <i class="fas fa-chalkboard-teacher text-[#0079C1] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-4 text-gray-800">Hands-on Training</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Learn by practice to develop real technologies.</p>
                     <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
-                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#00B7FF]"></i> Flexible</span>
-                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> All Levels</span>
+                        <span class="flex items-center"><i class="far fa-clock mr-2 text-[#0079C1]"></i> Flexible</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#0079C1]"></i> All Levels</span>
                     </div>
-                    <a href="#hands-on-details" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline">
+                    <a href="#hands-on-details" class="text-[#0079C1] font-medium inline-flex items-center hover:underline">
                         View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
                     </a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
-                        <i class="fas fa-industry text-[#00B7FF] text-[28px]"></i>
+                        <i class="fas fa-industry text-[#0079C1] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-[15px]">Industry Mentors</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Learn from experienced professionals with years of expertise.</p>
                     <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
-                        <span class="flex items-center"><i class="far fa-star mr-2 text-[#00B7FF]"></i> 10+ years</span>
-                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#00B7FF]"></i> Expert</span>
+                        <span class="flex items-center"><i class="far fa-star mr-2 text-[#0079C1]"></i> 10+ years</span>
+                        <span class="flex items-center"><i class="fas fa-signal mr-2 text-[#0079C1]"></i> Expert</span>
                     </div>
-                    <a href="#industry-mentors" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline">
+                    <a href="#industry-mentors" class="text-[#0079C1] font-medium inline-flex items-center hover:underline">
                         View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
                     </a>
                 </div>
                 
                 <div class="bg-white rounded-[15px] p-8 text-left transition-all duration-300 hover:-translate-y-[10px] border border-gray-100">
                     <div class="w-[60px] h-[60px] bg-[#f1f8ff] rounded-[15px] flex justify-center items-center mb-6">
-                        <i class="fas fa-certificate text-[#00B7FF] text-[28px]"></i>
+                        <i class="fas fa-certificate text-[#0079C1] text-[28px]"></i>
                     </div>
                     <h3 class="text-[1.3rem] font-semibold mb-[15px]">Certification</h3>
                     <p class="text-[#666] mb-5 leading-[1.7]">Get industry recognized certificates on completion.</p>
                     <div class="flex justify-between mb-5 text-[#777] bg-gray-50 p-3 rounded-lg">
-                        <span class="flex items-center"><i class="fas fa-globe mr-2 text-[#00B7FF]"></i> Global</span>
-                        <span class="flex items-center"><i class="fas fa-award mr-2 text-[#00B7FF]"></i> High Value</span>
+                        <span class="flex items-center"><i class="fas fa-globe mr-2 text-[#0079C1]"></i> Global</span>
+                        <span class="flex items-center"><i class="fas fa-award mr-2 text-[#0079C1]"></i> High Value</span>
                     </div>
-                    <a href="#certification" class="text-[#00B7FF] font-medium inline-flex items-center hover:underline">
+                    <a href="#certification" class="text-[#0079C1] font-medium inline-flex items-center hover:underline">
                         View Details <i class="fas fa-arrow-right ml-[5px] transition-transform duration-300 group-hover:translate-x-[5px]"></i>
                     </a>
                 </div>
@@ -1119,11 +1124,11 @@
     <!-- Tech Journey Section -->
     <section class="bg-[#f8f9fa] py-[80px] text-center" id="journey">
         <div class="container mx-auto px-[10%]">
-            <h2 class="text-[2rem] md:text-[2.5rem] mb-[30px] md:mb-[50px] relative inline-block">Ready to Start Your <span class="text-[#00B7FF]">Tech Journey?</span></h2>
+            <h2 class="text-[2rem] md:text-[2.5rem] mb-[30px] md:mb-[50px] relative inline-block">Ready to Start Your <span class="text-[#0079C1]">Tech Journey?</span></h2>
             <p>Join thousands of students who have successfully launched their careers with our training programs.</p>
             <div class="mt-[30px] flex flex-col sm:flex-row justify-center">
-                <a href="#explore" class="py-3 px-6 border-2 border-[#00B7FF] text-[#00B7FF] rounded-[30px] font-medium mx-2.5 mb-4 sm:mb-0 transition-all duration-300 hover:bg-[#00B7FF] hover:text-white inline-block">Explore Training Programs</a>
-                <a href="#download" class="py-3 px-6 border-2 border-[#00B7FF] text-[#00B7FF] rounded-[30px] font-medium mx-2.5 transition-all duration-300 hover:bg-[#00B7FF] hover:text-white inline-block">Download Curriculum</a>
+                <a href="#explore" class="py-3 px-6 border-2 border-[#0079C1] text-[#0079C1] rounded-[30px] font-medium mx-2.5 mb-4 sm:mb-0 transition-all duration-300 hover:bg-[#0079C1] hover:text-white inline-block">Explore Training Programs</a>
+                <a href="#download" class="py-3 px-6 border-2 border-[#0079C1] text-[#0079C1] rounded-[30px] font-medium mx-2.5 transition-all duration-300 hover:bg-[#0079C1] hover:text-white inline-block">Download Curriculum</a>
             </div>
         </div>
     </section>
@@ -1168,7 +1173,7 @@
                             }
                         },
                         "color": {
-                            "value": "#00B7FF"
+                            "value": "#0079C1"
                         },
                         "shape": {
                             "type": "circle",
@@ -1203,7 +1208,7 @@
                         "line_linked": {
                             "enable": true,
                             "distance": 150,
-                            "color": "#00B7FF",
+                            "color": "#0079C1",
                             "opacity": 0.2,
                             "width": 1
                         },
@@ -1518,7 +1523,7 @@
                     }
                 },
                 "color": {
-                    "value": "#00B7FF"
+                    "value": "#0079C1"
                 },
                 "shape": {
                     "type": "circle",
@@ -1553,7 +1558,7 @@
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#00B7FF",
+                    "color": "#0079C1",
                     "opacity": 0.4,
                     "width": 1
                 },

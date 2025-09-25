@@ -1,0 +1,93 @@
+/* Comestro Brand Colors */
+:root {
+    --comestro-orange: #F05A28; /* For "Com" */
+    --comestro-blue: #0079C1;   /* For "estro" */
+    --comestro-gray: #333333;   /* For tagline text */
+    
+    /* Additional brand colors - tints and shades */
+    --comestro-orange-light: #F78160;
+    --comestro-orange-dark: #D84315;
+    --comestro-blue-light: #4DA6D6;
+    --comestro-blue-dark: #005A91;
+    
+    /* Neutral colors */
+    --comestro-light-gray: #F8F9FA;
+    --comestro-medium-gray: #ADB5BD;
+    --comestro-dark-gray: #212529;
+    
+    /* Success, warning, error colors */
+    --comestro-success: #28A745;
+    --comestro-warning: #FFC107;
+    --comestro-error: #DC3545;
+}
+
+/* Common utility classes for brand colors */
+.text-comestro-orange { color: var(--comestro-orange); }
+.text-comestro-blue { color: var(--comestro-blue); }
+.text-comestro-gray { color: var(--comestro-gray); }
+
+.bg-comestro-orange { background-color: var(--comestro-orange); }
+.bg-comestro-blue { background-color: var(--comestro-blue); }
+.bg-comestro-gray { background-color: var(--comestro-gray); }
+
+.border-comestro-orange { border-color: var(--comestro-orange); }
+.border-comestro-blue { border-color: var(--comestro-blue); }
+.border-comestro-gray { border-color: var(--comestro-gray); }
+
+/* Button styles */
+.btn-comestro-primary {
+    background-color: var(--comestro-orange);
+    color: white;
+    border: 1px solid var(--comestro-orange);
+    transition: all 0.3s ease;
+}
+
+.btn-comestro-primary:hover {
+    background-color: var(--comestro-orange-dark);
+    border-color: var(--comestro-orange-dark);
+}
+
+.btn-comestro-secondary {
+    background-color: var(--comestro-blue);
+    color: white;
+    border: 1px solid var(--comestro-blue);
+    transition: all 0.3s ease;
+}
+
+.btn-comestro-secondary:hover {
+    background-color: var(--comestro-blue-dark);
+    border-color: var(--comestro-blue-dark);
+}
+
+.btn-comestro-outline-primary {
+    background-color: transparent;
+    color: var(--comestro-orange);
+    border: 1px solid var(--comestro-orange);
+    transition: all 0.3s ease;
+}
+
+.btn-comestro-outline-primary:hover {
+    background-color: var(--comestro-orange);
+    color: white;
+}
+
+.btn-comestro-outline-secondary {
+    background-color: transparent;
+    color: var(--comestro-blue);
+    border: 1px solid var(--comestro-blue);
+    transition: all 0.3s ease;
+}
+
+.btn-comestro-outline-secondary:hover {
+    background-color: var(--comestro-blue);
+    color: white;
+}
+
+/* Gradient backgrounds */
+.bg-comestro-gradient {
+    background: linear-gradient(135deg, var(--comestro-blue), var(--comestro-orange));
+}
+
+.bg-comestro-gradient-reversed {
+    background: linear-gradient(135deg, var(--comestro-orange), var(--comestro-blue));
+}
