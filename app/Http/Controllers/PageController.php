@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Careerjob;
 use App\Models\Internship;
+use App\Models\InternshipApplication;
 use App\Models\JobApplication;
 use App\Models\jobcategory;
 use Illuminate\Http\Request;
@@ -193,9 +194,58 @@ class PageController extends Controller
         $internship = Internship::findOrFail($id);
         return view('viewInternship', compact('internship'));
     }
-    public function applyInternship()
+    // public function applyInternship()
+    // {
+    //     return view('applyInternship');
+    // }
+
+ public function applyInternship($id)
+{
+    // Fetch internship by ID
+    $internship = Internship::findOrFail($id);
+
+    // Pass data to the view
+    return view('applyInternship', compact('internship'));
+}
+  // 🆕 New method for form submission
+    public function submit(Request $request, $id)
     {
-        return view('applyInternship');
+        $internship = Internship::findOrFail($id);
+
+        // ✅ Validate the incoming data
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required|string|max:15',
+            'qualification' => 'nullable|string|max:255',
+            'college' => 'nullable|string|max:255',
+            'skills' => 'nullable|string',
+            'motivation' => 'required|string',
+            'resume' => 'nullable|mimes:pdf|max:2048',
+        ]);
+
+        
+        $resumePath = null;
+        if ($request->hasFile('resume')) {
+            $resumePath = $request->file('resume')->store('resumes', 'public');
+        }
+
+      
+        InternshipApplication::create([
+            'internship_id' => $internship->id,
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'qualification' => $validated['qualification'] ?? null,
+            'college' => $validated['college'] ?? null,
+            'skills' => $validated['skills'] ?? null,
+            'motivation' => $validated['motivation'],
+            'answers' => json_encode($request->input('answers', [])),
+            'resume' => $resumePath,
+        ]);
+
+        
+        return redirect('careers')->with('success', 'Your application has been submitted successfully!');
     }
 
 }

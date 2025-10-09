@@ -16,6 +16,9 @@ use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
 
 // Home route
 Route::get('/', [HomeController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 // Static pages routes
 Route::get('/about', [PageController::class, 'about'])->name('about');
@@ -24,17 +27,17 @@ Route::get('/careers', [PageController::class, 'careers'])->name('careers');
 Route::get('/applyForm/{id}', [PageController::class, 'applyForm'])->name('careers.applyForm');
 Route::post('/applyForm/{id}', [PageController::class, 'submitApplication'])->name('careers.submitApplication');
 Route::get('/viewIntership/{id}', [PageController::class, 'viewInternship'])->name('viewIntern');
-Route::get('/applyInternship', [PageController::class, 'applyInternship'])->name('applyInternship');
-
+Route::get('/applyInternship/{id}', [PageController::class, 'applyInternship'])->name('applyInternship');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-
 // Training routes
 Route::get('/training', [PageController::class, 'training'])->name('training');
 Route::get('/training/courses', [PageController::class, 'trainingCourses'])->name('training.courses');
 Route::get('/training/workshops', [PageController::class, 'trainingWorkshops'])->name('training.workshops');
 Route::get('/training/placements', [PageController::class, 'trainingPlacements'])->name('training.placements');
 Route::get('/training/achievements', [PageController::class, 'trainingAchievements'])->name('training.achievements');
+Route::get('/internship/apply/{id}', [PageController::class, 'apply'])->name('internship.apply');
+Route::post('/internship/apply/{id}', [PageController::class, 'submit'])->name('internship.apply.submit');
+
 
 // Dynamic portfolio routes
 Route::get('/portfolio', [ProjectController::class, 'index'])->name('portfolio');

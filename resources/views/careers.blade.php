@@ -192,7 +192,7 @@
                         </div>
                         <div class="flex gap-3">
                             <a href="{{route('viewIntern', ['id' => $internship->id])}}" class="text-[#00B7FF] font-medium hover:underline">View →</a>
-                            <a href="{{route('applyInternship')}}" class="bg-[#00B7FF] text-white px-4 py-1 rounded hover:bg-blue-600">Apply</a>
+                            <a href="{{route('applyInternship', ['id' =>$internship->id])}}" class="bg-[#00B7FF] text-white px-4 py-1 rounded hover:bg-blue-600">Apply</a>
                         </div>
                     </div>
                 </div>
