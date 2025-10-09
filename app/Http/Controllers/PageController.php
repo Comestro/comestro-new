@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Careerjob;
+use App\Models\Internship;
+use App\Models\JobApplication;
+use App\Models\jobcategory;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -11,6 +15,53 @@ class PageController extends Controller
      *
      * @return \Illuminate\View\View
      */
+
+    public function applyForm($id)
+    {
+        $job = Careerjob::findOrFail($id);
+        return view('applyForm', compact('job'));
+    }
+
+    public function submitApplication(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'dob' => 'required|date',
+            'degree' => 'required|string',
+            'college' => 'required|string',
+            'year' => 'required|integer',
+            'percentage' => 'required',
+            'resume' => 'required|mimes:pdf|max:2048',
+        ]);
+
+        // Handle file upload
+        $resumePath = $request->file('resume')->store('resumes', 'public');
+
+        JobApplication::create([
+            'careerjob_id' => $id,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'dob' => $request->dob,
+            'degree' => $request->degree,
+            'college' => $request->college,
+            'year' => $request->year,
+            'percentage' => $request->percentage,
+            'experience' => $request->experience,
+            'previous_company' => $request->previous_company,
+            'role' => $request->role,
+            'skills' => $request->skills,
+            'location' => $request->location,
+            'salary' => $request->salary,
+            'notice_period' => $request->notice_period,
+            'resume' => $resumePath,
+            'cover_letter' => $request->cover_letter,
+        ]);
+
+        return redirect()->route('careers')->with('success', 'Application submitted successfully!');
+    }
     public function about()
     {
         return view('about');
@@ -35,7 +86,7 @@ class PageController extends Controller
     {
         return view('training');
     }
-    
+
     /**
      * Show the training courses page.
      *
@@ -45,7 +96,7 @@ class PageController extends Controller
     {
         return view('training.courses');
     }
-    
+
     /**
      * Show the training workshops page.
      *
@@ -55,7 +106,7 @@ class PageController extends Controller
     {
         return view('training.workshops');
     }
-    
+
     /**
      * Show the training placements page.
      *
@@ -65,7 +116,7 @@ class PageController extends Controller
     {
         return view('training.placements');
     }
-    
+
     /**
      * Show the training achievements page.
      *
@@ -83,8 +134,13 @@ class PageController extends Controller
      */
     public function careers()
     {
-        return view('careers');
+        $categories = jobcategory::all();
+        $jobs = Careerjob::with('category')->latest()->get();
+        $internships = Internship::all();
+        return view('careers', compact('categories', 'jobs', 'internships'));
     }
+
+
 
     /**
      * Show the contact page.
@@ -95,7 +151,13 @@ class PageController extends Controller
     {
         return view('contact');
     }
-    
+    //  public function filterByCategory($id)
+    // {
+    //     $categories = JobCategory::all();
+    //     $jobs = CareerJob::with('category')->where('category_id', $id)->latest()->get();
+    //     return view('careers.index', compact('categories', 'jobs'));
+    // }
+
     /**
      * Show the portfolio page.
      *
@@ -105,7 +167,7 @@ class PageController extends Controller
     {
         return view('portfolio');
     }
-    
+
     /**
      * Show the Game Zone Management Software page.
      *
@@ -115,7 +177,7 @@ class PageController extends Controller
     {
         return view('services.game-zone');
     }
-    
+
     /**
      * Show the Hospital Appointment System page.
      *
@@ -125,4 +187,15 @@ class PageController extends Controller
     {
         return view('services.hospital');
     }
+
+    public function viewInternship($id)
+    {
+        $internship = Internship::findOrFail($id);
+        return view('viewInternship', compact('internship'));
+    }
+    public function applyInternship()
+    {
+        return view('applyInternship');
+    }
+
 }

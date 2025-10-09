@@ -29,4 +29,5 @@ class DashboardController extends Controller
         
         return view('admin.dashboard', compact('projectCount', 'activeProjectCount', 'userCount', 'recentProjects'));
     }
+    
 }

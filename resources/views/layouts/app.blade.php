@@ -251,12 +251,11 @@
                 </li>
                 <li class="ml-[30px]"><a href="{{ route('portfolio') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Portfolio</a></li>
                 <li class="ml-[30px]"><a href="{{ route('training') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Training</a></li>
-                <li class="ml-[30px]"><a href="{{ route('careers') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Careers</a></li>
-                <li class="ml-[30px]"><a href="{{ route('contact') }}" class="text-[#555] font-medium hover:text-[#0079C1] transition-colors duration-300">Contact</a></li>
+
             </ul>
             <div class="hidden md:flex">
                 <a href="#demo" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#0079C1] text-[#0079C1] bg-transparent">Free Demo</a>
-                <a href="#signin" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#F05A28] bg-[#F05A28] text-white">Sign In</a>
+                <a href="{{ route('admin.register') }}" class="py-2.5 px-5 rounded-[30px] ml-4 font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 border border-[#F05A28] bg-[#F05A28] text-white">Sign In</a>
             </div>
             <button class="lg:hidden text-[#555] focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
