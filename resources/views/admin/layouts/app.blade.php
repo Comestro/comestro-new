@@ -71,6 +71,13 @@
                                 <span>View Job Applications</span>
                             </a>
                         </li>
+                         <li>
+                            <a href="{{ route('admin.expertDev') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
+                                        {{ request()->routeIs('admin.*') ? 'sidebar-active' : '' }}">
+                                <i class="fas fa-file-alt w-6"></i>
+                                <span>Add Expert Dev.</span>
+                            </a>
+                        </li>
                         <li>
                             {{-- <a href="{{ route('admin.careerjobs.create') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
                                 {{ request()->routeIs('admin.careerjobs.*') ? 'sidebar-active' : '' }}">

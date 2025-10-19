@@ -7,32 +7,42 @@
     <section class="page-header">
         <div class="container mx-auto px-[10%]">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">About <span class="text-[#00B7FF]">Us</span></h1>
-            <p class="text-xl text-gray-200 max-w-3xl mx-auto">Learn about our journey, mission, and the passionate team behind Comestro's innovative technology solutions.</p>
+            <p class="text-xl text-gray-200 max-w-3xl mx-auto">Learn about our journey, mission, and the passionate team
+                behind Comestro's innovative technology solutions.</p>
         </div>
     </section>
 
-    <!-- Our Story Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-[10%]">
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6">Our <span class="text-[#00B7FF]">Story</span></h2>
-                    <p class="mb-4 text-gray-700">
-                        Comestro was founded in 2020 with a vision to bridge the gap between cutting-edge technology and business needs. What started as a small team of passionate developers has grown into a comprehensive technology company delivering solutions across multiple domains.
-                    </p>
-                    <p class="mb-4 text-gray-700">
-                        Our journey began with web development projects for local businesses, but we quickly expanded into mobile applications, enterprise solutions, and specialized training programs to address the growing technology skill gap in the industry.
-                    </p>
-                    <p class="mb-4 text-gray-700">
-                        Today, Comestro stands as a trusted partner for businesses looking to leverage technology for growth and students aspiring to build careers in the fast-evolving tech landscape.
-                    </p>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team Collaboration" class="rounded-lg w-full">
-                </div>
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-[8%]">
+            <!-- Full Image on Top -->
+            <div class="rounded-2xl overflow-hidden shadow-lg mb-10">
+                <img src="{{ asset('comestroteam.jpeg') }}" alt="Team Collaboration"
+                    class="w-full h-[500px] object-cover object-center">
+            </div>
+
+            <!-- Text Content Below -->
+            <div class="text-center md:text-left md:max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+                    Our <span class="text-[#00B7FF]">Story</span>
+                </h2>
+                <p class="text-gray-700 text-lg mb-4 leading-relaxed">
+                    Founded in 2020, <span class="font-semibold text-[#00B7FF]">Comestro</span> began with a mission
+                    to bridge technology and business innovation. What started as a small team of developers has grown
+                    into a trusted name delivering digital solutions and career-ready tech training.
+                </p>
+                <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                    Today, we help companies transform ideas into powerful technology,
+                    and empower students to thrive in a fast-moving digital world.
+                </p>
+                <a href="#"
+                    class="inline-block bg-[#00B7FF] hover:bg-[#0090cc] transition-all duration-300 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-md">
+                    Learn More
+                </a>
             </div>
         </div>
     </section>
+
+
 
     <!-- Vision & Mission Section -->
     <section class="py-16 bg-gray-50">
@@ -47,7 +57,8 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Our Vision</h3>
                     <p class="text-gray-700">
-                        To create cutting-edge technology solutions that transform businesses and empower individuals to achieve their digital aspirations through innovation and excellence.
+                        To create cutting-edge technology solutions that transform businesses and empower individuals to
+                        achieve their digital aspirations through innovation and excellence.
                     </p>
                     <ul class="mt-4">
                         <li class="flex items-center mb-2">
@@ -70,7 +81,8 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
                     <p class="text-gray-700">
-                        To deliver high-quality software solutions, provide impactful training programs, and foster long-term growth for our clients and students through dedication, expertise, and commitment.
+                        To deliver high-quality software solutions, provide impactful training programs, and foster
+                        long-term growth for our clients and students through dedication, expertise, and commitment.
                     </p>
                     <ul class="mt-4">
                         <li class="flex items-center mb-2">
@@ -96,7 +108,8 @@
         <div class="container mx-auto px-[10%]">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold">Our Core <span class="text-[#00B7FF]">Values</span></h2>
-                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">The principles that guide our work and shape our company culture</p>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">The principles that guide our work and shape our company
+                    culture</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="p-6 border border-gray-100 rounded-lg transition duration-300">
@@ -168,11 +181,13 @@
                 <!-- Leader 1 -->
                 <div class="text-center">
                     <div class="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-full">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="CEO" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="CEO" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold">David Mitchell</h3>
                     <p class="text-[#00B7FF] mb-2">Founder & CEO</p>
-                    <p class="text-gray-600 mb-4">Over 15 years of experience in software development and technology leadership.</p>
+                    <p class="text-gray-600 mb-4">Over 15 years of experience in software development and technology
+                        leadership.</p>
                     <div class="flex justify-center space-x-3">
                         <a href="#" class="text-gray-500 hover:text-[#00B7FF]">
                             <i class="fab fa-linkedin"></i>
@@ -185,11 +200,13 @@
                 <!-- Leader 2 -->
                 <div class="text-center">
                     <div class="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-full">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="CTO" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="CTO" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold">Sarah Johnson</h3>
                     <p class="text-[#00B7FF] mb-2">Chief Technology Officer</p>
-                    <p class="text-gray-600 mb-4">Expert in cloud architecture and enterprise solutions with a background in machine learning.</p>
+                    <p class="text-gray-600 mb-4">Expert in cloud architecture and enterprise solutions with a background
+                        in machine learning.</p>
                     <div class="flex justify-center space-x-3">
                         <a href="#" class="text-gray-500 hover:text-[#00B7FF]">
                             <i class="fab fa-linkedin"></i>
@@ -202,11 +219,13 @@
                 <!-- Leader 3 -->
                 <div class="text-center">
                     <div class="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-full">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="COO" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="COO" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold">Michael Rodriguez</h3>
                     <p class="text-[#00B7FF] mb-2">Chief Operations Officer</p>
-                    <p class="text-gray-600 mb-4">Specialized in business optimization and scaling tech operations for efficiency.</p>
+                    <p class="text-gray-600 mb-4">Specialized in business optimization and scaling tech operations for
+                        efficiency.</p>
                     <div class="flex justify-center space-x-3">
                         <a href="#" class="text-gray-500 hover:text-[#00B7FF]">
                             <i class="fab fa-linkedin"></i>
@@ -256,10 +275,12 @@
                 Partner with Comestro for innovative tech solutions that transform your business and drive growth.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="{{ route('contact') }}" class="px-8 py-3 bg-white text-[#00B7FF] font-semibold rounded-full transition duration-300">
+                <a href="{{ route('contact') }}"
+                    class="px-8 py-3 bg-white text-[#00B7FF] font-semibold rounded-full transition duration-300">
                     Contact Us
                 </a>
-                <a href="{{ route('services') }}" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-300">
+                <a href="{{ route('services') }}"
+                    class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#00B7FF] transition duration-300">
                     Explore Services
                 </a>
             </div>

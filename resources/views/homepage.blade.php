@@ -798,7 +798,7 @@
             </div>
             <div class="flex flex-wrap justify-center mt-[60px]">
                 <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
-                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#0079C1] mb-[5px] stat-number">500+</div>
+                    <div class="text-[2rem] md:text-[2.5rem] font-bold text-[#0079C1] mb-[5px] stat-number">{{ $totalproject }}</div>
                     <div class="text-[#ddd] text-base stat-text">Projects Completed</div>
                 </div>
                 <div class="mx-5 md:mx-10 text-center mb-6 md:mb-0">
@@ -846,7 +846,7 @@
             
             <div class="flex flex-wrap justify-center mt-[70px] gap-x-[20px] md:gap-x-[50px] gap-y-[30px]">
                 <div class="text-center w-[calc(50%-20px)] md:w-auto">
-                    <div class="text-[2rem] font-bold text-[#0079C1]">5+</div>
+                    <div class="text-[2rem] font-bold text-[#0079C1]">14+</div>
                     <div class="text-[#666] text-[0.9rem]">Years Experience</div>
                 </div>
                 <div class="text-center w-[calc(50%-20px)] md:w-auto">

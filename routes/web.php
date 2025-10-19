@@ -72,7 +72,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/applications', [CareerJobController::class, 'applications'])->name('applications.index');
     Route::get('/applications/{id}', [CareerJobController::class, 'viewApplication'])->name('applications.show');
     Route::delete('/applications/{id}', [CareerJobController::class, 'deleteApplication'])->name('applications.destroy');
-
+    Route::get('/expertDev', [AdminController::class,'addExpertDev'])->name('expertDev');
+    Route::get('/expertDev/store', [AdminController::class, 'storeExpertDev'])->name('admin.expertDev.store');
 
     // Projects
     Route::resource('projects', AdminProjectController::class);
