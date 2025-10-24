@@ -20,7 +20,7 @@ class HomeController extends Controller
         return view('homepage', compact('totalproject', 'totalExpertDev'));
     }
     public function experts(){
-        $experts = Expert::paginate(5);
+        $experts = Expert::all();
         return view('experts', compact('experts'))  ;
     }
 }

@@ -48,38 +48,42 @@
                         <li>
                             <a href="{{ route('admin.jobcategories.create') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
                                  {{ request()->routeIs('admin.jobcategories.*') ? 'sidebar-active' : '' }}">
-                                <i class="fas fa-tachometer-alt w-6"></i>
+                                <i class="fas fa-briefcase w-6"></i>
                                 <span>Job-Categories</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('admin.careerjobs.create') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
                                 {{ request()->routeIs('admin.careerjobs.*') ? 'sidebar-active' : '' }}">
-                                <i class="fas fa-tachometer-alt w-6"></i>
+                                <i class="fas fa-briefcase mr-3 w-5"></i>
                                 <span>Add Jobs</span>
                             </a>
                         </li>
                         <li>
+                        <li>
                             <a href="{{ route('admin.intern') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
-                                 {{ request()->routeIs('admin.careers.*') ? 'sidebar-active' : '' }}">
-                                <i class="fas fa-briefcase mr-3 w-5"></i>
+                             {{ request()->routeIs('admin.careers.*') ? 'sidebar-active' : '' }}">
+                                <i class="fas fa-user-graduate mr-3 w-5"></i>
                                 <span>Add Internship</span>
                             </a>
                         </li>
 
                         <li>
                             <a href="{{ route('admin.applications.index') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
-                                        {{ request()->routeIs('admin.applications.*') ? 'sidebar-active' : '' }}">
-                                <i class="fas fa-file-alt w-6"></i>
+                                 {{ request()->routeIs('admin.applications.*') ? 'sidebar-active' : '' }}">
+                                <i class="fas fa-file-contract mr-3 w-5"></i>
                                 <span>View Job Applications</span>
                             </a>
                         </li>
+
                         <li>
                             <a href="{{ route('admin.expertIndex') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
-                                        {{ request()->routeIs('admin.*') ? 'sidebar-active' : '' }}">
-                                <i class="fas fa-file-alt w-6"></i>
-                                <span>Our Experts.</span>
+                                  {{ request()->routeIs('admin.*') ? 'sidebar-active' : '' }}">
+                                <i class="fas fa-user-tie mr-3 w-5"></i>
+                                <span>Our Experts</span>
                             </a>
+                        </li>
+
                         </li>
                         <li>
                             {{-- <a href="{{ route('admin.careerjobs.create') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
@@ -100,7 +104,7 @@
                             <li>
                                 <a href="{{ route('admin.users') }}"
                                     class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
-                                                                         {{ request()->is('admin/users*') ? 'sidebar-active' : '' }}">
+                                                                             {{ request()->is('admin/users*') ? 'sidebar-active' : '' }}">
                                     <i class="fas fa-users w-6"></i>
                                     <span>Users</span>
                                 </a>
@@ -110,8 +114,8 @@
                             <li>
                                 <a href="{{ route('admin.contacts') }}"
                                     class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
-                                                                        {{ request()->is('admin/allMessages*') ? 'sidebar-active' : '' }}">
-                                    <i class="fas fa-users w-6"></i>
+                                                                            {{ request()->is('admin/allMessages*') ? 'sidebar-active' : '' }}">
+                                      <i class="fas fa-envelope mr-3 w-5"></i>
                                     <span>All Messages</span>
                                 </a>
                             </li>

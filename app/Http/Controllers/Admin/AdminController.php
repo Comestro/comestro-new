@@ -29,7 +29,7 @@ class AdminController extends Controller
                 'email' => 'required|email|unique:experts,email',
                 'skill' => 'required',
                 'image' => 'nullable|image|max:2048',
-                'bio' => 'required|min:10|max:50',
+                'bio' => 'required|min:10|max:255',
 
 
             ]);
