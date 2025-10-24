@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
 
     <style>
         * {
@@ -71,11 +74,11 @@
                                 <span>View Job Applications</span>
                             </a>
                         </li>
-                         <li>
-                            <a href="{{ route('admin.expertDev') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
+                        <li>
+                            <a href="{{ route('admin.expertIndex') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
                                         {{ request()->routeIs('admin.*') ? 'sidebar-active' : '' }}">
                                 <i class="fas fa-file-alt w-6"></i>
-                                <span>Add Expert Dev.</span>
+                                <span>Our Experts.</span>
                             </a>
                         </li>
                         <li>
@@ -95,9 +98,9 @@
                         </li>
                         @if(auth()->user() && auth()->user()->isAdmin())
                             <li>
-                                <a href="{{ url('/admin/users') }}"
+                                <a href="{{ route('admin.users') }}"
                                     class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
-                                                                     {{ request()->is('admin/users*') ? 'sidebar-active' : '' }}">
+                                                                         {{ request()->is('admin/users*') ? 'sidebar-active' : '' }}">
                                     <i class="fas fa-users w-6"></i>
                                     <span>Users</span>
                                 </a>
@@ -107,14 +110,14 @@
                             <li>
                                 <a href="{{ route('admin.contacts') }}"
                                     class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
-                                                                    {{ request()->is('admin/allMessages*') ? 'sidebar-active' : '' }}">
+                                                                        {{ request()->is('admin/allMessages*') ? 'sidebar-active' : '' }}">
                                     <i class="fas fa-users w-6"></i>
                                     <span>All Messages</span>
                                 </a>
                             </li>
                         @endif
                         <li>
-                            <a href="{{ url('/admin/settings') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
+                            <a href="{{ route('admin.adminSetting') }}" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 
                                      {{ request()->is('admin/settings*') ? 'sidebar-active' : '' }}">
                                 <i class="fas fa-cog w-6"></i>
                                 <span>Settings</span>

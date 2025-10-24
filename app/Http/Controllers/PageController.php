@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Careerjob;
+use App\Models\Expert;
 use App\Models\Internship;
 use App\Models\InternshipApplication;
 use App\Models\JobApplication;
 use App\Models\jobcategory;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -65,7 +67,9 @@ class PageController extends Controller
     }
     public function about()
     {
-        return view('about');
+        $totalprojects = Project::count();
+        $totalExpertsDev = Expert::count();
+        return view('about', compact('totalprojects', 'totalExpertsDev'));
     }
 
     /**
@@ -201,18 +205,18 @@ class PageController extends Controller
 
  public function applyInternship($id)
 {
-    // Fetch internship by ID
+
     $internship = Internship::findOrFail($id);
 
-    // Pass data to the view
+    
     return view('applyInternship', compact('internship'));
 }
-  // 🆕 New method for form submission
+ 
     public function submit(Request $request, $id)
     {
         $internship = Internship::findOrFail($id);
 
-        // ✅ Validate the incoming data
+       
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',

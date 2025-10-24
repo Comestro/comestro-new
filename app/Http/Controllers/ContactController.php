@@ -26,4 +26,15 @@ class ContactController extends Controller
     return redirect()->back()->with('success', 'Your message has been sent successfully!');
 }
 
+public function viewmsg($id){
+    $message = contact::findOrFail($id);
+    return view('admin.viewmsg', compact('message'));
+}
+
+public function deleteContact($id){
+    $msg = contact::findOrFail($id);
+    $msg->delete();
+    return redirect()->back()->with('success', 'contact deleted successfully');
+}
+
 }

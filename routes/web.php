@@ -67,13 +67,27 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('careerjobs', CareerJobController::class);
     // routes/web.php
     Route::get('/allMessages', [AdminController::class, 'contactMessages'])->name('contacts');
+    Route::get('/viewmsg/{id}', [ContactController::class, 'viewmsg'])->name('viewmsg');
+    Route::delete('deleteContact/{id}', [ContactController::class, 'deleteContact'])->name('deleteContact');
 
     // Job Applications
     Route::get('/applications', [CareerJobController::class, 'applications'])->name('applications.index');
     Route::get('/applications/{id}', [CareerJobController::class, 'viewApplication'])->name('applications.show');
     Route::delete('/applications/{id}', [CareerJobController::class, 'deleteApplication'])->name('applications.destroy');
     Route::get('/expertDev', [AdminController::class,'addExpertDev'])->name('expertDev');
-    Route::get('/expertDev/store', [AdminController::class, 'storeExpertDev'])->name('admin.expertDev.store');
+    // Route::get('/expertDev/store', [AdminController::class, 'storeExpertDev'])->name('admin.expertDev.store');
+    Route::post('/expertDev', [AdminController::class ,'storeExpertDev'])->name('expertDev.store');
+
+    Route::get('/expertIndex', [AdminController::class, 'expertIndex'])->name('expertIndex');
+    Route::put('/updateexpert/{id}', [AdminController::class, 'updateExpert'])->name('updateexpert');
+    Route::get('/viewexpert/{id}', [AdminController::class, 'viewexpert'])->name('viewexpert');
+    Route::delete('/delete-expert/{id}', [AdminController::class, 'deleteExpert'])->name('deleteexpert');
+    Route::get('/adminSetting', [AdminController::class, 'adminSetting'])->name('adminSetting');
+    Route::get('/users', [AdminController::class, 'users'])->name('users');
+    Route::delete('/deleteUser/{id}', [AdminController::class, 'deleteUser'])->name('deleteUser');
+    Route::put('/updateUser/{id}', [AdminController::class, 'updateUser'])->name('updateUser');
+
+
 
     // Projects
     Route::resource('projects', AdminProjectController::class);

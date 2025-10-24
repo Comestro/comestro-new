@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Expert;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -15,6 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         $totalproject = Project::count();
-        return view('homepage', compact('totalproject'));
+        $totalExpertDev = Expert::count();
+        return view('homepage', compact('totalproject', 'totalExpertDev'));
     }
 }

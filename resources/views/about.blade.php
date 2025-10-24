@@ -181,19 +181,19 @@
                 <!-- Leader 1 -->
                 <div class="text-center">
                     <div class="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-full">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        <img src="{{ asset('sadiquesir.jpg') }}"
                             alt="CEO" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-semibold">David Mitchell</h3>
+                    <h3 class="text-xl font-semibold">Syed Sadiue Hussain</h3>
                     <p class="text-[#00B7FF] mb-2">Founder & CEO</p>
                     <p class="text-gray-600 mb-4">Over 15 years of experience in software development and technology
                         leadership.</p>
                     <div class="flex justify-center space-x-3">
-                        <a href="#" class="text-gray-500 hover:text-[#00B7FF]">
+                        <a href="https://www.linkedin.com/in/sadique-hussain/" class="text-gray-500 hover:text-[#00B7FF]">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="text-gray-500 hover:text-[#00B7FF]">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://github.com/sadique-cws/    " class="text-gray-500 hover:text-[#00B7FF]">
+                            <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
@@ -248,11 +248,11 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                 <div class="p-6 bg-gray-50 rounded-lg transition duration-300">
-                    <div class="text-4xl font-bold text-[#00B7FF] mb-2">500+</div>
+                    <div class="text-4xl font-bold text-[#00B7FF] mb-2">{{ $totalprojects }}+</div>
                     <p class="text-xl text-gray-700">Projects Completed</p>
                 </div>
                 <div class="p-6 bg-gray-50 rounded-lg transition duration-300">
-                    <div class="text-4xl font-bold text-[#00B7FF] mb-2">50+</div>
+                    <div class="text-4xl font-bold text-[#00B7FF] mb-2">{{ $totalExpertsDev }}+</div>
                     <p class="text-xl text-gray-700">Expert Developers</p>
                 </div>
                 <div class="p-6 bg-gray-50 rounded-lg transition duration-300">
