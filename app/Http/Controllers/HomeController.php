@@ -19,4 +19,8 @@ class HomeController extends Controller
         $totalExpertDev = Expert::count();
         return view('homepage', compact('totalproject', 'totalExpertDev'));
     }
+    public function experts(){
+        $experts = Expert::paginate(5);
+        return view('experts', compact('experts'))  ;
+    }
 }

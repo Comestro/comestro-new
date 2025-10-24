@@ -298,6 +298,8 @@
                         <li class="mb-2.5"><a href="{{ route('training') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Training</a></li>
                         <li class="mb-2.5"><a href="{{ route('careers') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Careers</a></li>
                         <li class="mb-2.5"><a href="{{ route('contact') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Contact</a></li>
+                        <li class="mb-2.5"><a href="{{ route('experts') }}" class="text-[#adb5bd] hover:text-[#0079C1] transition-colors duration-300">Our Experts</a></li>
+
                     </ul>
                 </div>
                 

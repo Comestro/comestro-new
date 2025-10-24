@@ -19,7 +19,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-
+Route::get('/experts', [HomeController::class, 'experts'])->name('experts');
 // Static pages routes
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/services', [PageController::class, 'services'])->name('services');

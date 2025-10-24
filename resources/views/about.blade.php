@@ -16,7 +16,7 @@
         <div class="container mx-auto px-[8%]">
             <!-- Full Image on Top -->
             <div class="rounded-2xl overflow-hidden shadow-lg mb-10">
-                <img src="{{ asset('comestroteam.jpeg') }}" alt="Team Collaboration"
+                <img src="{{ asset('comestrot.png') }}" alt="Team Collaboration"
                     class="w-full h-[500px] object-cover object-center">
             </div>
 
