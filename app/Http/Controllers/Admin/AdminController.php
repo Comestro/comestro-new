@@ -22,24 +22,24 @@ class AdminController extends Controller
     {
         return view('admin.expertDev');
     }
-    public function storeExpertDev(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|min:3',
-            'email' => 'required|email|unique:experts,email',
-            'skill' => 'required',
-            'image' => 'nullable|image|max:2048',
-            'bio' => 'required|min:10|max:50',
+        public function storeExpertDev(Request $request)
+        {
+            $validated = $request->validate([
+                'name' => 'required|min:3',
+                'email' => 'required|email|unique:experts,email',
+                'skill' => 'required',
+                'image' => 'nullable|image|max:2048',
+                'bio' => 'required|min:10|max:50',
 
 
-        ]);
-        if ($request->hasfile('image')) {
-            $path = $request->file('image')->store('experts', 'public');
-            $validated['image'] = $path;
+            ]);
+            if ($request->hasfile('image')) {
+                $path = $request->file('image')->store('experts', 'public');
+                $validated['image'] = $path;
+            }
+            Expert::create($validated);
+            return redirect()->back()->with('success', 'expert created successfull');
         }
-        Expert::create($validated);
-        return redirect()->back()->with('success', 'expert created successfull');
-    }
 
     public function expertIndex()
     {
@@ -54,10 +54,16 @@ class AdminController extends Controller
         $expert->email = $request->email;
         $expert->skill = $request->skill;
 
-        if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('experts', 'public');
-            $expert->image = basename($path);
+         if ($request->hasFile('image')) {
+        // Delete old image if exists
+        if ($expert->image && file_exists(storage_path('app/public/' . $expert->image))) {
+            unlink(storage_path('app/public/' . $expert->image));
         }
+
+        // Store new image and save full path
+        $path = $request->file('image')->store('experts', 'public');
+        $expert->image = $path; // store full path like in storeExpertDev
+    }
 
         $expert->save();
 

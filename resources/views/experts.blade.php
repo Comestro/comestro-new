@@ -2,7 +2,7 @@
 @section('title', 'Our Experts')
 
 @section('content')
-<div class="max-w-7xl mx-auto px-6 py-12">
+<div class="max-w-7xl mx-auto px-6 py-20">
     <h1 class="text-4xl font-bold text-center text-[#0079C1] mb-10">Meet Our Experts</h1>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
