@@ -184,7 +184,7 @@
                         <img src="{{ asset('sadiquesir.jpg') }}"
                             alt="CEO" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-semibold">Syed Sadiue Hussain</h3>
+                    <h3 class="text-xl font-semibold">Syed Sadique Hussain</h3>
                     <p class="text-[#00B7FF] mb-2">Founder & CEO</p>
                     <p class="text-gray-600 mb-4">Over 15 years of experience in software development and technology
                         leadership.</p>

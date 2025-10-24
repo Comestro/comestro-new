@@ -12,7 +12,7 @@
                     
                     {{-- Profile Image --}}
                     @if ($expert->image)
-                        <img src="{{ asset('storage/experts/' . $expert->image) }}" 
+                        <img src="{{ asset('storage/' . $expert->image) }}" 
                              alt="{{ $expert->name }}"
                              class="w-28 h-28 object-cover rounded-full shadow-md border-4 border-blue-100">
                     @else
